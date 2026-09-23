@@ -12,21 +12,31 @@
       href="https://fonts.googleapis.com/css2?family=Monomakh&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
       rel="stylesheet"
     />
+    <script
+      src="https://kit.fontawesome.com/3e6fc461ea.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
-  <body>
-    <header>
-      <img src="./src/assets/logo2.svg" alt="Logo" />
-      <nav>
+  <body class="font-jakarta">
+    <header class="flex justify-between items-center px-5 py-5">
+      <img src="./src/assets/logo2.svg" alt="Logo" class="h-10" />
+      <nav class="hidden md:flex">
         <a href="#">Home</a>
         <a href="#">Destination</a>
         <a href="#">About</a>
         <a href="#">Contact</a>
       </nav>
+      <i class="fa-solid fa-bars fa-xl"></i>
     </header>
     <main>
-      <section>
-        <h1>Discover <span>Indonesia’s</span> Natural Beauty</h1>
-        <p>
+      <section
+        id="hero"
+        class="h-[60vh] flex flex-col justify-start items-center gap-2 bg-hero-pattern bg-no-repeat bg-cover bg-position-[75%_center] relative px-10 py-10 pr-15"
+      >
+        <h1 class="font-monomakh text-3xl">
+          Discover <span class="text-green">Indonesia’s</span> Natural Beauty
+        </h1>
+        <p class="text-sm">
           Explore the breathtaking beauty of Indonesia, from crystal-clear
           beaches and tropical islands to majestic mountains and lush forests.
           Discover amazing destinations and create unforgettable memories along
@@ -34,26 +44,28 @@
         </p>
         <a href="#">Explore</a>
         <!-- hero relative card -->
-        <div>
+        <div
+          class="absolute bottom-[-30%] right-0 left-0 flex flex-col items-center gap-5 bg-white mx-5 p-5 shadow-2xl text-center rounded-3xl"
+        >
           <div>
             <img src="" alt="" />
             <div>
-              <h3>Explore Nature</h3>
-              <p>Explore Indonesia’s beautiful nature.</p>
+              <h3 class="font-monomakh text-xl">Explore Nature</h3>
+              <p class="text-xs">Explore Indonesia’s beautiful nature.</p>
             </div>
           </div>
           <div>
             <img src="" alt="" />
             <div>
-              <h3>Discover Culture</h3>
-              <p>Safe and comfortable journeys.</p>
+              <h3 class="font-monomakh text-lg">Discover Culture</h3>
+              <p p class="text-xs">Safe and comfortable journeys.</p>
             </div>
           </div>
           <div>
             <img src="" alt="" />
             <div>
-              <h3>Support Local</h3>
-              <p>Support local communities and businesses.</p>
+              <h3 class="font-monomakh text-lg">Support Local</h3>
+              <p p class="text-xs">Support local communities and businesses.</p>
             </div>
           </div>
         </div>
@@ -66,9 +78,9 @@
           <a href="#">explore map</a>
         </div>
         <div>
-          <img src="" alt="">
+          <img src="" alt="" />
         </div>
-      </section>  
+      </section>
     </main>
   </body>
 </html>
