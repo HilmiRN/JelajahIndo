@@ -12,10 +12,7 @@
       href="https://fonts.googleapis.com/css2?family=Monomakh&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
       rel="stylesheet"
     />
-    <script
-      src="https://kit.fontawesome.com/3e6fc461ea.js"
-      crossorigin="anonymous"
-    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.2"></script>
   </head>
   <body class="font-jakarta">
     <header class="flex justify-between items-center px-5 py-5">
@@ -26,53 +23,90 @@
         <a href="#">About</a>
         <a href="#">Contact</a>
       </nav>
-      <i class="fa-solid fa-bars fa-xl"></i>
+      <i class="ph-bold ph-list text-3xl"></i>
     </header>
     <main>
-      <section
-        id="hero"
-        class="h-[60vh] flex flex-col justify-start items-start gap-2 bg-hero-pattern bg-no-repeat bg-cover bg-position-[75%_center] relative px-5 py-10 pr-15"
+      <section id="hero"
+        class="h-[60vh] flex flex-col justify-start items-start gap-2 bg-hero-pattern bg-no-repeat bg-cover bg-position-[75%_center] relative px-5 py-10"
       >
-        <h1 class="font-monomakh text-3xl">
+        <h1 class="font-monomakh text-3xl sm:w-3/4">
           Discover <span class="text-green">Indonesia’s</span> Natural Beauty
         </h1>
-        <p class="text-sm">
+        <p class="text-sm sm:w-3/4">
           Explore the breathtaking beauty of Indonesia, from crystal-clear
           beaches and tropical islands to majestic mountains and lush forests.
           Discover amazing destinations and create unforgettable memories along
           the way.
         </p>
-        <a href="#" class="px-3 py-2 rounded-2xl bg-green text-white mt-3">Explore</a>
+        <a
+          href="#"
+          class="inline-flex items-center gap-1.5 px-3 py-2 rounded-2xl bg-green text-white mt-3"
+        >
+          Explore ↗
+        </a>
         <!-- hero relative card -->
         <div
-          class="absolute bottom-[-30%] right-0 left-0 flex flex-col items-center gap-5 bg-white mx-5 p-5 shadow-2xl text-center rounded-3xl"
+          class="absolute -bottom-1/5 w-[calc(100%-2.5rem)] max-w-5xl bg-white p-6 md:p-8 shadow-2xl rounded-3xl flex flex-col md:flex-row gap-6 md:gap-8 border border-gray-100"
         >
-          <div>
-            <img src="" alt="" />
+          <!-- Item 1 -->
+          <div class="flex items-center gap-4 text-left">
+            <div class="p-3 bg-green-50 text-green-700 rounded-2xl">
+              <i class="ph ph-leaf text-3xl"></i>
+            </div>
             <div>
-              <h3 class="font-monomakh text-xl">Explore Nature</h3>
-              <p class="text-xs">Explore Indonesia’s beautiful nature.</p>
+              <h3
+                class="font-monomakh text-xl font-bold text-gray-900"
+              >
+                Explore Nature
+              </h3>
+              <p class="text-xs text-gray-500 mt-1">
+                Explore Indonesia’s beautiful nature.
+              </p>
             </div>
           </div>
-          <div>
-            <img src="" alt="" />
+
+          <!-- Item 2 -->
+          <div
+            class="flex items-center gap-4 text-left md:border-l md:border-gray-100 md:pl-8"
+          >
+            <div class="p-3 bg-green-50 text-green-700 rounded-2xl">
+              <i class="ph-bold ph-tree-evergreen text-3xl"></i>
+            </div>
             <div>
-              <h3 class="font-monomakh text-xl">Discover Culture</h3>
-              <p p class="text-xs">Safe and comfortable journeys.</p>
+              <h3
+                class="font-monomakh text-xl font-bold text-gray-900"
+              >
+                Discover Culture
+              </h3>
+              <p class="text-xs text-gray-500 mt-1">
+                Safe and comfortable journeys.
+              </p>
             </div>
           </div>
-          <div>
-            <img src="" alt="" />
+
+          <!-- Item 3 -->
+          <div
+            class="flex items-center gap-4 text-left md:border-l md:border-gray-100 md:pl-8"
+          >
+            <div class="p-3 bg-green-50 text-green-700 rounded-2xl ">
+              <i class="ph-fill ph-handshake text-3xl"></i>
+            </div>
             <div>
-              <h3 class="font-monomakh text-xl">Support Local</h3>
-              <p p class="text-xs">Support local communities and businesses.</p>
+              <h3
+                class="font-monomakh text-xl font-bold text-gray-900"
+              >
+                Support Local
+              </h3>
+              <p class="text-xs text-gray-500 mt-1">
+                Support local communities and businesses.
+              </p>
             </div>
           </div>
         </div>
       </section>
-      <section>
+      <section id="maps" class="mt-50">
         <div>
-          <p>Explore The</p>
+          <p class="">Explore The</p>
           <h2>Archipelago.</h2>
           <p>Thousands of islands An unforgettable journey</p>
           <a href="#">explore map</a>

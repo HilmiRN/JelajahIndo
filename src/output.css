@@ -8,18 +8,23 @@
       "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
+    --color-green-50: oklch(98.2% 0.018 155.826);
+    --color-green-700: oklch(52.7% 0.154 150.069);
+    --color-gray-100: oklch(96.7% 0.003 264.542);
+    --color-gray-500: oklch(55.1% 0.027 264.364);
+    --color-gray-900: oklch(21% 0.034 264.665);
     --color-white: #fff;
     --spacing: 0.25rem;
+    --container-5xl: 64rem;
     --text-xs: 0.75rem;
     --text-xs--line-height: calc(1 / 0.75);
     --text-sm: 0.875rem;
     --text-sm--line-height: calc(1.25 / 0.875);
-    --text-lg: 1.125rem;
-    --text-lg--line-height: calc(1.75 / 1.125);
     --text-xl: 1.25rem;
     --text-xl--line-height: calc(1.75 / 1.25);
     --text-3xl: 1.875rem;
     --text-3xl--line-height: calc(2.25 / 1.875);
+    --font-weight-bold: 700;
     --radius-2xl: 1rem;
     --radius-3xl: 1.5rem;
     --default-font-family: var(--font-sans);
@@ -184,26 +189,50 @@
   .relative {
     position: relative;
   }
-  .right-0 {
-    right: 0px;
+  .-bottom-1 {
+    bottom: calc(var(--spacing) * -1);
   }
-  .bottom-\[-30\%\] {
-    bottom: -30%;
+  .-bottom-1\/2 {
+    bottom: calc(calc(1 / 2 * 100%) * -1);
   }
-  .left-0 {
-    left: 0px;
+  .-bottom-1\/3 {
+    bottom: calc(calc(1 / 3 * 100%) * -1);
   }
-  .mx-5 {
-    margin-inline: calc(var(--spacing) * 5);
+  .-bottom-1\/4 {
+    bottom: calc(calc(1 / 4 * 100%) * -1);
+  }
+  .-bottom-1\/5 {
+    bottom: calc(calc(1 / 5 * 100%) * -1);
+  }
+  .-bottom-1\/8 {
+    bottom: calc(calc(1 / 8 * 100%) * -1);
+  }
+  .-bottom-3 {
+    bottom: calc(var(--spacing) * -3);
+  }
+  .-bottom-3\/8 {
+    bottom: calc(calc(3 / 8 * 100%) * -1);
+  }
+  .mt-1 {
+    margin-top: var(--spacing);
   }
   .mt-3 {
     margin-top: calc(var(--spacing) * 3);
+  }
+  .mt-20 {
+    margin-top: calc(var(--spacing) * 20);
+  }
+  .mt-50 {
+    margin-top: calc(var(--spacing) * 50);
   }
   .flex {
     display: flex;
   }
   .hidden {
     display: none;
+  }
+  .inline-flex {
+    display: inline-flex;
   }
   .table {
     display: table;
@@ -213,6 +242,12 @@
   }
   .h-\[60vh\] {
     height: 60vh;
+  }
+  .w-\[calc\(100\%-2\.5rem\)\] {
+    width: calc(100% - 2.5rem);
+  }
+  .max-w-5xl {
+    max-width: var(--container-5xl);
   }
   .border-collapse {
     border-collapse: collapse;
@@ -238,14 +273,20 @@
   .justify-start {
     justify-content: flex-start;
   }
+  .gap-1 {
+    gap: var(--spacing);
+  }
+  .gap-1\.5 {
+    gap: calc(var(--spacing) * 1.5);
+  }
   .gap-2 {
     gap: calc(var(--spacing) * 2);
   }
-  .gap-5 {
-    gap: calc(var(--spacing) * 5);
+  .gap-4 {
+    gap: calc(var(--spacing) * 4);
   }
-  .rounded {
-    border-radius: 0.25rem;
+  .gap-6 {
+    gap: calc(var(--spacing) * 6);
   }
   .rounded-2xl {
     border-radius: var(--radius-2xl);
@@ -257,14 +298,20 @@
     border-style: var(--tw-border-style);
     border-width: 1px;
   }
+  .border-gray-100 {
+    border-color: var(--color-gray-100);
+  }
   .bg-green {
     background-color: var(--color-green);
+  }
+  .bg-green-50 {
+    background-color: var(--color-green-50);
   }
   .bg-white {
     background-color: var(--color-white);
   }
   .bg-hero-pattern {
-    background-image: linear-gradient(90deg, rgba(255, 255, 255, 0.9) 10%, rgba(255, 255, 255, 0.5) 65%, rgba(255, 255, 255, 0) 80%), url('./assets/hero-background.jpg');
+    background-image: linear-gradient(125deg, rgba(255, 255, 255, 0.9) 10%, rgba(255, 255, 255, 0.5) 65%, rgba(255, 255, 255, 0) 80%), url('./assets/hero-background.jpg');
   }
   .bg-cover {
     background-size: cover;
@@ -275,20 +322,17 @@
   .bg-no-repeat {
     background-repeat: no-repeat;
   }
-  .p-5 {
-    padding: calc(var(--spacing) * 5);
+  .p-3 {
+    padding: calc(var(--spacing) * 3);
   }
-  .px-2 {
-    padding-inline: calc(var(--spacing) * 2);
+  .p-6 {
+    padding: calc(var(--spacing) * 6);
   }
   .px-3 {
     padding-inline: calc(var(--spacing) * 3);
   }
   .px-5 {
     padding-inline: calc(var(--spacing) * 5);
-  }
-  .py-1 {
-    padding-block: var(--spacing);
   }
   .py-2 {
     padding-block: calc(var(--spacing) * 2);
@@ -299,14 +343,8 @@
   .py-10 {
     padding-block: calc(var(--spacing) * 10);
   }
-  .pr-15 {
-    padding-right: calc(var(--spacing) * 15);
-  }
-  .text-center {
-    text-align: center;
-  }
-  .text-right {
-    text-align: right;
+  .text-left {
+    text-align: left;
   }
   .font-jakarta {
     font-family: var(--font-jakarta);
@@ -317,10 +355,6 @@
   .text-3xl {
     font-size: var(--text-3xl);
     line-height: var(--tw-leading, var(--text-3xl--line-height));
-  }
-  .text-lg {
-    font-size: var(--text-lg);
-    line-height: var(--tw-leading, var(--text-lg--line-height));
   }
   .text-sm {
     font-size: var(--text-sm);
@@ -334,8 +368,21 @@
     font-size: var(--text-xs);
     line-height: var(--tw-leading, var(--text-xs--line-height));
   }
+  .font-bold {
+    --tw-font-weight: var(--font-weight-bold);
+    font-weight: var(--font-weight-bold);
+  }
+  .text-gray-500 {
+    color: var(--color-gray-500);
+  }
+  .text-gray-900 {
+    color: var(--color-gray-900);
+  }
   .text-green {
     color: var(--color-green);
+  }
+  .text-green-700 {
+    color: var(--color-green-700);
   }
   .text-white {
     color: var(--color-white);
@@ -351,9 +398,33 @@
     outline-style: var(--tw-outline-style);
     outline-width: 1px;
   }
+  @media (width >= 40rem) {
+    .sm\:w-3\/4 {
+      width: calc(3 / 4 * 100%);
+    }
+  }
   @media (width >= 48rem) {
     .md\:flex {
       display: flex;
+    }
+    .md\:flex-row {
+      flex-direction: row;
+    }
+    .md\:gap-8 {
+      gap: calc(var(--spacing) * 8);
+    }
+    .md\:border-l {
+      border-left-style: var(--tw-border-style);
+      border-left-width: 1px;
+    }
+    .md\:border-gray-100 {
+      border-color: var(--color-gray-100);
+    }
+    .md\:p-8 {
+      padding: calc(var(--spacing) * 8);
+    }
+    .md\:pl-8 {
+      padding-left: calc(var(--spacing) * 8);
     }
   }
 }
@@ -381,6 +452,10 @@
   syntax: "*";
   inherits: false;
   initial-value: solid;
+}
+@property --tw-font-weight {
+  syntax: "*";
+  inherits: false;
 }
 @property --tw-shadow {
   syntax: "*";
@@ -461,6 +536,7 @@
       --tw-skew-x: initial;
       --tw-skew-y: initial;
       --tw-border-style: solid;
+      --tw-font-weight: initial;
       --tw-shadow: 0 0 #0000;
       --tw-shadow-color: initial;
       --tw-shadow-alpha: 100%;
