@@ -6,60 +6,82 @@
     <title>JelajahIndo</title>
     <link rel="icon" type="image/png" href="./src/assets/logo.png" />
     <link rel="stylesheet" href="./src/output.css" />
+
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Monomakh&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
       rel="stylesheet"
     />
+
+    <!-- Phosphor Icons -->
     <script src="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.2"></script>
   </head>
-  <body class="font-jakarta">
-    <header class="flex justify-between items-center px-5 py-5">
-      <img src="./src/assets/logo2.svg" alt="Logo" class="h-10" />
-      <nav class="hidden md:flex">
-        <a href="#">Home</a>
-        <a href="#">Destination</a>
-        <a href="#">About</a>
-        <a href="#">Contact</a>
-      </nav>
-      <i class="ph-bold ph-list text-3xl"></i>
-    </header>
-    <main>
-      <section id="hero"
-        class="h-[60vh] flex flex-col justify-start items-start gap-2 bg-hero-pattern bg-no-repeat bg-cover bg-position-[75%_center] relative px-5 py-10"
-      >
-        <h1 class="font-monomakh text-3xl sm:w-3/4">
-          Discover <span class="text-green">Indonesia’s</span> Natural Beauty
-        </h1>
-        <p class="text-sm sm:w-3/4">
-          Explore the breathtaking beauty of Indonesia, from crystal-clear
-          beaches and tropical islands to majestic mountains and lush forests.
-          Discover amazing destinations and create unforgettable memories along
-          the way.
-        </p>
-        <a
-          href="#"
-          class="inline-flex items-center gap-1.5 px-3 py-2 rounded-2xl bg-green text-white mt-3"
+  <body class="font-jakarta text-gray-800">
+    <!-- Header -->
+    <header
+      class="flex justify-between items-center px-5 py-4 md:px-20 max-w-7xl mx-auto w-full"
+    >
+      <img src="./src/assets/logo2.svg" alt="JelajahIndo Logo" class="h-10" />
+      <nav class="hidden md:flex gap-6 font-semibold">
+        <a href="#" class="hover:text-green-700 transition-colors">Home</a>
+        <a href="#" class="hover:text-green-700 transition-colors"
+          >Destination</a
         >
-          Explore ↗
-        </a>
-        <!-- hero relative card -->
+        <a href="#" class="hover:text-green-700 transition-colors">About</a>
+        <a href="#" class="hover:text-green-700 transition-colors">Contact</a>
+      </nav>
+      <button aria-label="Open Menu" class="md:hidden">
+        <i class="ph-bold ph-list text-3xl"></i>
+      </button>
+    </header>
+
+    <main>
+      <!-- Hero Section -->
+      <section
+        id="hero"
+        class="min-h-[65vh] flex flex-col bg-hero-pattern bg-no-repeat bg-cover bg-center relative justify-center"
+      >
         <div
-          class="absolute -bottom-1/5 w-[calc(100%-2.5rem)] max-w-5xl bg-white p-6 md:p-8 shadow-2xl rounded-3xl flex flex-col md:flex-row gap-6 md:gap-8 border border-gray-100"
+          class="flex flex-col items-start gap-3 px-5 py-12 md:px-20 max-w-xl"
+        >
+          <p
+            class="text-xs md:text-sm font-semibold text-green tracking-wider uppercase bg-green-50 px-3 py-1 rounded-full"
+          >
+            Explore Wonderful Indonesia
+          </p>
+          <h1
+            class="font-monomakh text-2xl sm:text-3xl md:text-4xl text-gray-900"
+          >
+            Discover <span class="text-green-700">Indonesia’s</span><br />
+            Natural Beauty
+          </h1>
+          <p class="text-xs sm:text-sm md:text-base text-gray-600 max-w-lg">
+            Explore the breathtaking beauty of Indonesia, from crystal-clear
+            beaches and tropical islands to majestic mountains and lush forests.
+            Discover amazing destinations and create unforgettable memories.
+          </p>
+
+          <a href="#" class="btn">
+            Explore <i class="ph-bold ph-arrow-up-right text-xs"></i>
+          </a>
+        </div>
+
+        <!-- Floating Info Cards -->
+        <div
+          class="absolute left-1/2 -translate-x-1/2 -bottom-1/4 md:-bottom-1/10 w-[calc(100%-2.5rem)] max-w-5xl bg-white p-5 md:p-6 shadow-xl rounded-2xl grid grid-cols-1 md:grid-cols-3 gap-6 border border-gray-100"
         >
           <!-- Item 1 -->
           <div class="flex items-center gap-4 text-left">
-            <div class="p-3 bg-green-50 text-green-700 rounded-2xl">
-              <i class="ph ph-leaf text-3xl"></i>
+            <div class="p-2.5 bg-green-50 text-green-700 rounded-xl">
+              <i class="ph ph-leaf text-2xl"></i>
             </div>
             <div>
-              <h3
-                class="font-monomakh text-xl font-bold text-gray-900"
-              >
+              <h3 class="font-monomakh text-lg font-bold text-gray-900">
                 Explore Nature
               </h3>
-              <p class="text-xs text-gray-500 mt-1">
+              <p class="text-xs text-gray-500 mt-0.5">
                 Explore Indonesia’s beautiful nature.
               </p>
             </div>
@@ -67,18 +89,16 @@
 
           <!-- Item 2 -->
           <div
-            class="flex items-center gap-4 text-left md:border-l md:border-gray-100 md:pl-8"
+            class="flex items-center gap-4 text-left md:border-l md:border-gray-100 md:pl-6"
           >
-            <div class="p-3 bg-green-50 text-green-700 rounded-2xl">
-              <i class="ph-bold ph-tree-evergreen text-3xl"></i>
+            <div class="p-2.5 bg-green-50 text-green-700 rounded-xl">
+              <i class="ph-bold ph-tree-evergreen text-2xl"></i>
             </div>
             <div>
-              <h3
-                class="font-monomakh text-xl font-bold text-gray-900"
-              >
+              <h3 class="font-monomakh text-lg font-bold text-gray-900">
                 Discover Culture
               </h3>
-              <p class="text-xs text-gray-500 mt-1">
+              <p class="text-xs text-gray-500 mt-0.5">
                 Safe and comfortable journeys.
               </p>
             </div>
@@ -86,33 +106,125 @@
 
           <!-- Item 3 -->
           <div
-            class="flex items-center gap-4 text-left md:border-l md:border-gray-100 md:pl-8"
+            class="flex items-center gap-4 text-left md:border-l md:border-gray-100 md:pl-6"
           >
-            <div class="p-3 bg-green-50 text-green-700 rounded-2xl ">
-              <i class="ph-fill ph-handshake text-3xl"></i>
+            <div class="p-2.5 bg-green-50 text-green-700 rounded-xl">
+              <i class="ph-fill ph-handshake text-2xl"></i>
             </div>
             <div>
-              <h3
-                class="font-monomakh text-xl font-bold text-gray-900"
-              >
+              <h3 class="font-monomakh text-lg font-bold text-gray-900">
                 Support Local
               </h3>
-              <p class="text-xs text-gray-500 mt-1">
+              <p class="text-xs text-gray-500 mt-0.5">
                 Support local communities and businesses.
               </p>
             </div>
           </div>
         </div>
       </section>
-      <section id="maps" class="mt-50">
-        <div>
-          <p class="">Explore The</p>
-          <h2>Archipelago.</h2>
-          <p>Thousands of islands An unforgettable journey</p>
-          <a href="#">explore map</a>
+
+      <!-- Maps Section -->
+      <section
+        id="maps"
+        class="mt-50 mb-20 flex flex-col-reverse md:flex-row items-center gap-10 px-5 md:px-20 max-w-7xl mx-auto"
+      >
+        <div class="w-full md:w-1/2 text-center md:text-left">
+          <p class="text-green-700 font-bold uppercase text-sm">Explore The</p>
+          <h2
+            class="font-monomakh text-3xl md:text-5xl text-gray-900 mt-1 mb-3"
+          >
+            Archipelago.
+          </h2>
+          <p class="md:text-md mb-5 max-w-md mx-auto md:mx-0 leading-4">
+            Thousands of islands, an unforgettable journey waiting for you.
+          </p>
+          <a href="#" class="btn"> Explore Map </a>
         </div>
-        <div>
-          <img src="" alt="" />
+        <div class="w-full md:w-1/2 flex justify-center">
+          <img
+            src="./src/assets/archipelago.svg"
+            alt="Indonesian map"
+            class="w-full max-w-lg h-auto"
+          />
+        </div>
+      </section>
+      <!-- Section 3 -->
+      <section class="mx-5 md:mx-15 xl:mx-25 my-50">
+        <div class="flex justify-between gap-10 items-center mb-5">
+          <div>
+            <p class="text-green-700 font-bold uppercase text-sm">
+              Explore The
+            </p>
+            <h2
+              class="font-monomakh text-xl md:text-3xl text-gray-900 mt-1 mb-3"
+            >
+              Discover Our Tropical Paradise
+            </h2>
+          </div>
+          <a href="#" class="text-green font-bold">See More</a>
+        </div>
+        <div class="flex gap-10 flex-wrap justify-center">
+          <!-- card 1 -->
+          <div class="relative w-75 h-50 md:w-75 md:h-100 rounded-3xl overflow-hidden">
+            <img
+              src="./src/assets/Labuanbajo.jpg"
+              alt="Labuan Bajo"
+              class="w-full h-full object-cover"
+            />
+            <div class="absolute inset-0 bg-overlay-dark"></div>
+            <div
+              class="absolute bottom-0 left-0 right-0 p-6 text-white flex flex-col gap-1"
+            >
+              <h2 class="text-2xl md:text-2xl font-bold font-jakarta uppercase">
+                LABUAN BAJO
+              </h2>
+              <div class="flex items-center gap-1.5 text-sm text-gray-200">
+                <i class="ph-bold ph-map-pin text-base"></i>
+                <p>East Nusa Tenggara</p>
+              </div>
+            </div>
+          </div>
+          <!-- card 2 -->
+           <div class="relative w-75 h-50 md:w-75 md:h-100 rounded-3xl overflow-hidden">
+            <img
+              src="./src/assets/Labuanbajo.jpg"
+              alt="Labuan Bajo"
+              class="w-full h-full object-cover"
+            />
+            <div class="absolute inset-0 bg-overlay-dark"></div>
+            <div
+              class="absolute bottom-0 left-0 right-0 p-6 text-white flex flex-col gap-1"
+            >
+              <h2 class="text-2xl md:text-2xl font-bold font-jakarta uppercase">
+                raja ampat
+              </h2>
+              <div class="flex items-center gap-1.5 text-sm text-gray-200">
+                <i class="ph-bold ph-map-pin text-base"></i>
+                <p>West Papua</p>
+              </div>
+            </div>
+          </div>
+          <!-- card 3 -->
+           <div class="relative w-75 h-50 md:w-75 md:h-100 rounded-3xl overflow-hidden">
+            <img
+              src="./src/assets/komodo.jpg"
+              alt="Komodo Island"
+              class="w-full h-full object-cover"
+            />
+            <div class="absolute inset-0 bg-overlay-dark"></div>
+            <div
+              class="absolute bottom-0 left-0 right-0 p-6 text-white flex flex-col gap-1"
+            >
+              <h2 class="text-2xl md:text-2xl font-bold font-jakarta uppercase">
+komodo Island
+              </h2>
+              <div class="flex items-center gap-1.5 text-sm text-gray-200">
+                <i class="ph-bold ph-map-pin text-base"></i>
+                <p>East Nusa Tenggara</p>
+              </div>
+            </div>
+          </div>
+          <!-- end -->
         </div>
       </section>
     </main>
