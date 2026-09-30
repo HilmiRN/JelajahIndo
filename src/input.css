@@ -30,7 +30,7 @@
       180deg,
       var(--color-green, #0f6b3a) 0%,
       rgb(15 107 58 / 0.9) 50%,
-      transparent 75%
+      transparent 100%
     ),
     url("./assets/komodo.jpg");
   background-size: cover;

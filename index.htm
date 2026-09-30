@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>JelajahIndo</title>
+    <title>JelajahIndo - Explore Indonesian Nature</title>
     <link rel="icon" type="image/png" href="./src/assets/logo.png" />
     <link rel="stylesheet" href="./src/output.css" />
 
@@ -21,20 +21,40 @@
   <body class="font-jakarta text-gray-800">
     <!-- Header -->
     <header
-      class="flex justify-between items-center px-5 py-4 md:px-20 mx-auto w-full"
+      class="flex justify-between items-center px-5 py-4 md:px-20 mx-auto w-full relative z-9 md:fixed"
     >
       <img src="./src/assets/logo2.svg" alt="JelajahIndo Logo" class="h-10" />
+
+      <!-- Desktop -->
       <nav class="hidden md:flex gap-6 font-semibold">
-        <a href="#" class="hover:text-green-700 transition-colors">Home</a>
-        <a href="#" class="hover:text-green-700 transition-colors"
-          >Destination</a
-        >
-        <a href="#" class="hover:text-green-700 transition-colors">About</a>
-        <a href="#" class="hover:text-green-700 transition-colors">Contact</a>
+        <a href="#">Home</a>
+        <a href="#"> Destination </a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
       </nav>
-      <button aria-label="Open Menu" class="md:hidden">
-        <i class="ph-bold ph-list text-3xl"></i>
+
+      <!-- Mobile Button -->
+      <button id="menu-button" class="md:hidden relative z-20">
+        <i id="menu-icon" class="ph-bold ph-list text-3xl"></i>
       </button>
+
+      <!-- Fullscreen Mobile Menu -->
+      <div
+        id="mobile-menu"
+        class="fixed inset-0 z-8 h-screen w-screen bg-white -translate-x-full transition-transform duration-500 ease-in-out"
+      >
+        <nav
+          class="flex h-full flex-col items-center justify-center gap-8 text-2xl font-semibold"
+        >
+          <a href="#" class="mobile-link"> Home </a>
+
+          <a href="#" class="mobile-link"> Destination </a>
+
+          <a href="#" class="mobile-link"> About </a>
+
+          <a href="#" class="mobile-link"> Contact </a>
+        </nav>
+      </div>
     </header>
     <main>
       <!-- Hero Section -->
@@ -53,7 +73,7 @@
           <h1
             class="font-monomakh text-2xl sm:text-3xl md:text-4xl text-gray-900"
           >
-            Discover <span class="text-green-700">Indonesia’s</span><br />
+            Discover <span class="text-green">Indonesia’s</span><br />
             Natural Beauty
           </h1>
           <p class="text-xs sm:text-sm md:text-base text-gray-600 max-w-lg">
@@ -73,7 +93,7 @@
         >
           <!-- Item 1 -->
           <div class="flex items-center gap-4 text-left">
-            <div class="p-2.5 bg-green-50 text-green-700 rounded-xl">
+            <div class="p-2.5 bg-green-50 text-green rounded-xl">
               <i class="ph ph-leaf text-2xl"></i>
             </div>
             <div>
@@ -90,7 +110,7 @@
           <div
             class="flex items-center gap-4 text-left md:border-l md:border-gray-100 md:pl-6"
           >
-            <div class="p-2.5 bg-green-50 text-green-700 rounded-xl">
+            <div class="p-2.5 bg-green-50 text-green rounded-xl">
               <i class="ph-bold ph-tree-evergreen text-2xl"></i>
             </div>
             <div>
@@ -107,7 +127,7 @@
           <div
             class="flex items-center gap-4 text-left md:border-l md:border-gray-100 md:pl-6"
           >
-            <div class="p-2.5 bg-green-50 text-green-700 rounded-xl">
+            <div class="p-2.5 bg-green-50 text-green rounded-xl">
               <i class="ph-fill ph-handshake text-2xl"></i>
             </div>
             <div>
@@ -256,9 +276,7 @@
           class="flex justify-center gap-10 h-fit w-full flex-wrap xl:flex-nowrap"
         >
           <!-- card 1 -->
-          <div
-            class="bg-white rounded-2xl overflow-hidden grow flex flex-col"
-          >
+          <div class="bg-white rounded-2xl overflow-hidden grow flex flex-col">
             <div class="relative w-full h-40">
               <img
                 src="https://images.pexels.com/photos/35383074/pexels-photo-35383074.jpeg"
@@ -272,9 +290,7 @@
               </span>
             </div>
             <div class="p-5 flex flex-col justify-between w-full">
-              <h3
-                class="font-bold line-clamp-2"
-              >
+              <h3 class="font-bold line-clamp-2">
                 5 Tips for Safe Mountain Hiking in Bromo
               </h3>
               <p class="text-xs mt-4">12 Mei 2025</p>
@@ -282,9 +298,7 @@
           </div>
           <!-- card 1 clear -->
           <!-- card 2 -->
-          <div
-            class="bg-white rounded-2xl overflow-hidden grow flex flex-col"
-          >
+          <div class="bg-white rounded-2xl overflow-hidden grow flex flex-col">
             <div class="relative w-full h-40">
               <img
                 src="https://images.pexels.com/photos/35383074/pexels-photo-35383074.jpeg"
@@ -298,9 +312,7 @@
               </span>
             </div>
             <div class="p-5 flex flex-col justify-between w-full">
-              <h3
-                class="font-bold line-clamp-2"
-              >
+              <h3 class="font-bold line-clamp-2">
                 5 Tips for Safe Mountain Hiking in Bromo
               </h3>
               <p class="text-xs mt-4">12 Mei 2025</p>
@@ -308,9 +320,7 @@
           </div>
           <!-- card 2 clear -->
           <!-- card 3 -->
-          <div
-            class="bg-white rounded-2xl overflow-hidden grow flex flex-col"
-          >
+          <div class="bg-white rounded-2xl overflow-hidden grow flex flex-col">
             <div class="relative w-full h-40">
               <img
                 src="https://images.pexels.com/photos/35383074/pexels-photo-35383074.jpeg"
@@ -324,9 +334,7 @@
               </span>
             </div>
             <div class="p-5 flex flex-col justify-between w-full">
-              <h3
-                class="font-bold line-clamp-2"
-              >
+              <h3 class="font-bold line-clamp-2">
                 5 Tips for Safe Mountain Hiking in Bromo
               </h3>
               <p class="text-xs mt-4">12 Mei 2025</p>
@@ -364,5 +372,34 @@
         </div>
       </section>
     </main>
+    <footer>
+      
+    </footer>
+    <script>
+      const menuButton = document.getElementById("menu-button");
+      const menuIcon = document.getElementById("menu-icon");
+      const mobileMenu = document.getElementById("mobile-menu");
+      const mobileLinks = document.querySelectorAll(".mobile-link");
+
+      menuButton.addEventListener("click", () => {
+        mobileMenu.classList.toggle("-translate-x-full");
+        mobileMenu.classList.toggle("translate-x-0");
+
+        const isOpen = mobileMenu.classList.contains("translate-x-0");
+
+        menuIcon.classList.toggle("ph-list", !isOpen);
+        menuIcon.classList.toggle("ph-x", isOpen);
+      });
+
+      mobileLinks.forEach((link) => {
+        link.addEventListener("click", () => {
+          mobileMenu.classList.add("-translate-x-full");
+          mobileMenu.classList.remove("translate-x-0");
+
+          menuIcon.classList.remove("ph-x");
+          menuIcon.classList.add("ph-list");
+        });
+      });
+    </script>
   </body>
 </html>
