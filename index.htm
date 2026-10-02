@@ -21,7 +21,7 @@
   <body class="font-jakarta text-gray-800">
     <!-- Header -->
     <header
-      class="flex justify-between items-center px-5 py-4 md:px-20 mx-auto w-full relative z-9 md:fixed"
+      class="flex justify-between items-center px-5 py-4 md:px-20 bg-white/80 backdrop-blur-md mx-auto w-full relative z-9 md:fixed"
     >
       <img src="./src/assets/logo2.svg" alt="JelajahIndo Logo" class="h-10" />
 
@@ -372,8 +372,49 @@
         </div>
       </section>
     </main>
-    <footer>
+    <footer id="footer" class="bg-green-800 mt-24 w-full">
+      <div
+        class="max-w-400 mx-auto px-5 md:px-10 py-10 flex flex-col md:flex-row items-center justify-between gap-8"
+      >
+        <!-- LOGO -->
 
+        <div
+          class="flex flex-col items-center md:items-start text-center md:text-left"
+        >
+          <div
+            class="flex flex-col items-center md:items-start text-center md:text-left"
+          >
+            <div class="flex items-center gap-2 hover:scale-105 transition">
+              <img src="./src/assets/Logo.png" alt="JelajahIndo" class="w-8" />
+
+              <h1 class="font-serif text-xl md:text-2xl text-white">
+                JelajahIndo
+              </h1>
+            </div>
+          </div>
+          <p
+            class="font-sans text-white text-[10px] md:text-sm font-medium pt-2 max-w-65"
+          >
+            Explore the beauty, culture, and nature of Indonesia.
+          </p>
+        </div>
+
+        <!-- LINKS -->
+        <nav class="hidden md:flex gap-6 font-semibold text-white items-center">
+          <a href="./index.htm">Home</a>
+          <a href="./destination.html"> Destination </a>
+          <a href="./about.html">About</a>
+          <a href="./article.html">Article</a>
+        </nav>
+      </div>
+
+      <!-- COPYRIGHT -->
+
+      <div class="border-t border-white/30 py-4 text-center">
+        <p class="text-[9px] md:text-sm text-white">
+          ©2026 JelajahIndo. All Right Reserved
+        </p>
+      </div>
     </footer>
     <script src="./script.js"></script>
   </body>

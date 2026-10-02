@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JelajahIndo - About Us</title>
+    <link rel="icon" type="image/png" href="./src/assets/logo.png" />
+    <link rel="stylesheet" href="./src/output.css" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Monomakh&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Phosphor Icons -->
+    <script src="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.2"></script>
+  </head>
+  <body class="font-jakarta text-gray-800">
+    <!-- Header -->
+    <header
+      class="flex justify-between items-center px-5 py-4 md:px-20 bg-white mx-auto w-full relative z-9 md:fixed"
+    >
+      <img src="./src/assets/logo2.svg" alt="JelajahIndo Logo" class="h-10" />
+
+      <!-- Desktop -->
+      <nav class="hidden md:flex gap-6 font-semibold">
+        <a href="./index.htm">Home</a>
+        <a href="./destination.html"> Destination </a>
+        <a href="./about.html">About</a>
+        <a href="./article.html">Article</a>
+      </nav>
+
+      <!-- Mobile Button -->
+      <button id="menu-button" class="md:hidden relative z-20">
+        <i id="menu-icon" class="ph-bold ph-list text-3xl"></i>
+      </button>
+
+      <!-- Fullscreen Mobile Menu -->
+      <div
+        id="mobile-menu"
+        class="fixed inset-0 z-8 h-screen w-screen bg-white/80 backdrop-blur-md -translate-x-full transition-transform duration-500 ease-in-out"
+      >
+        <nav
+          class="flex h-full flex-col items-center justify-center gap-8 text-2xl font-semibold"
+        >
+          <a href="./index.htm" class="mobile-link"> Home </a>
+
+          <a href="./destination.html" class="mobile-link"> Destination </a>
+
+          <a href="./about.html" class="mobile-link"> About </a>
+
+          <a href="./article.html" class="mobile-link"> Article </a>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <section>
+        <div class="mt-20">
+          <img
+            src="./src/assets/Rectangle-7.png"
+            alt=""
+            class="w-400 h-auto relative"
+          />
+        </div>
+
+        <div class="flex flex-col gap-5 absolute top-40 p-25">
+          <h1 class="font-serif text-white text-5xl max-w-150">
+            Stories, tips, and inspiration for adventure.
+          </h1>
+          <p class="font-serif text-white max-w-130 text-sm">
+            Discover a variety of engaging articles covering destinations,
+            travel tips, local cuisine, culture, and inspiring stories from
+            every corner of Indonesia.
+          </p>
+        </div>
+      </section>
+
+      <!-- latest ariticle -->
+      <section>
+        <div class="p-20 mt-30 ml-20">
+          <h1 class="text-4xl border-l-4 pl-3">Latest Articles</h1>
+          <p class="text-sm max-w-80 pl-4">
+            Explore our curated articles for information, tips, and fascinating
+            stories from the world of travel.
+          </p>
+        </div>
+      </section>
+      <!-- isi lates articles -->
+      <section>
+        <div class="flex flex-row ml-20">
+          <div>
+            <img
+              src="./src/assets/ranuk 1.png"
+              alt=""
+              class="pl-20 bottom-30 w-180 h-auto"
+            />
+          </div>
+
+          <div class="flex flex-col pl-20">
+            <button class="bg-gray-400 rounded-2xl text-[12px] w-23">
+              DESTINASI
+            </button>
+            <h1 class="text-[24px] max-w-75 font-medium pt-3">
+              5 Best Nature Destinations in Indonesia You Must Visit
+            </h1>
+            <p class="max-w-120 font-normal pt-10">
+              From the beauty of the mountains to the charm of the beaches,
+              Indonesia boasts many breathtaking natural destinations. Here are
+              five places that belong on your travel bucket list.
+            </p>
+            <p class="text-sm pb-5 pt-5">12 Sep 2025</p>
+            <button class="bg-green-800 w-45 h-10 rounded-2xl text-white">
+              Read more →
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- other articles -->
+      <section>
+        <div class="p-20 mt-12 ml-15">
+          <h1 class="text-4xl border-l-4 pl-3">Other Articles</h1>
+          <p class="text-sm max-w-80 pl-4">
+            Don't miss out on other interesting articles that can broaden your
+            horizons and inspire your travels
+          </p>
+        </div>
+      </section>
+    </main>
+    <footer id="footer" class="bg-green-800 mt-24 w-full">
+      <div
+        class="max-w-400 mx-auto px-5 md:px-10 py-10 flex flex-col md:flex-row items-center justify-between gap-8"
+      >
+        <!-- LOGO -->
+
+        <div
+          class="flex flex-col items-center md:items-start text-center md:text-left"
+        >
+          <div
+            class="flex flex-col items-center md:items-start text-center md:text-left"
+          >
+            <div class="flex items-center gap-2 hover:scale-105 transition">
+              <img src="./src/assets/Logo.png" alt="JelajahIndo" class="w-8" />
+
+              <h1 class="font-serif text-xl md:text-2xl text-white">
+                JelajahIndo
+              </h1>
+            </div>
+          </div>
+          <p
+            class="font-sans text-white text-[10px] md:text-sm font-medium pt-2 max-w-65"
+          >
+            Explore the beauty, culture, and nature of Indonesia.
+          </p>
+        </div>
+
+        <!-- LINKS -->
+        <nav class="hidden md:flex gap-6 font-semibold text-white items-center">
+          <a href="./index.htm">Home</a>
+          <a href="./destination.html"> Destination </a>
+          <a href="./about.html">About</a>
+          <a href="./article.html">Article</a>
+        </nav>
+      </div>
+
+      <!-- COPYRIGHT -->
+
+      <div class="border-t border-white/30 py-4 text-center">
+        <p class="text-[9px] md:text-sm text-white">
+          ©2026 JelajahIndo. All Right Reserved
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
