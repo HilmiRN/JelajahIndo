@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JelajahIndo || Destinations</title>
+    <link rel="icon" type="image/png" href="./src/assets/logo.png" />
+    <link rel="stylesheet" href="./src/output.css" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Monomakh&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Phosphor Icons -->
+    <script src="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.2"></script>
+  </head>
+  <body class="font-jakarta text-gray-800">
+    <!-- Header -->
+    <header
+      class="flex justify-between items-center px-5 py-4 md:px-20 bg-white mx-auto w-full relative z-9 md:fixed"
+    >
+      <img src="./src/assets/logo2.svg" alt="JelajahIndo Logo" class="h-10" />
+
+      <!-- Desktop -->
+      <nav class="hidden md:flex gap-6 font-semibold">
+        <a href="./index.htm">Home</a>
+        <a href="./destination.html"> Destination </a>
+        <a href="./about.html">About</a>
+        <a href="./article.html">Article</a>
+      </nav>
+
+      <!-- Mobile Button -->
+      <button id="menu-button" class="md:hidden relative z-20">
+        <i id="menu-icon" class="ph-bold ph-list text-3xl"></i>
+      </button>
+
+      <!-- Fullscreen Mobile Menu -->
+      <div
+        id="mobile-menu"
+        class="fixed inset-0 z-8 h-screen w-screen bg-white/80 backdrop-blur-md -translate-x-full transition-transform duration-500 ease-in-out"
+      >
+        <nav
+          class="flex h-full flex-col items-center justify-center gap-8 text-2xl font-semibold"
+        >
+          <a href="./index.htm" class="mobile-link"> Home </a>
+
+          <a href="./destination.html" class="mobile-link"> Destination </a>
+
+          <a href="./about.html" class="mobile-link"> About </a>
+
+          <a href="./article.html" class="mobile-link"> Article </a>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <section>
+        <video
+          src="https://www.pexels.com/download/video/30700902/"
+          loop
+          autoplay
+          muted
+          playsinline
+        ></video>
+      </section>
+      <section class="m-5 md:m-25 my-50">
+        <hgroup class="text-center mb-10">
+          <h1 class="text-3xl lg:text-5xl font-monomakh">Explore Indonesia</h1>
+          <p class="text-lg text-green font-semibold">
+            Discover the best destinations across Indonesia.
+          </p>
+        </hgroup>
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 w-full gap-10"
+        >
+          <!-- card 1 -->
+          <div class="card-destination">
+            <img
+              src="./src/assets/Labuanbajo.jpg"
+              alt="Labuan Bajo"
+              class="card-destination-img"
+            />
+            <div class="card-destination-overlay"></div>
+            <div class="card-destination-body">
+              <h2 class="card-destination-title">LABUAN BAJO</h2>
+              <div class="card-destination-location">
+                <i class="ph-bold ph-map-pin text-base"></i>
+                <p>East Nusa Tenggara</p>
+              </div>
+            </div>
+          </div>
+          <!-- card 2 -->
+          <div class="card-destination">
+            <img
+              src="./src/assets/borobudur.jpg"
+              alt="Borobudur Temple"
+              class="card-destination-img"
+            />
+            <div class="card-destination-overlay"></div>
+            <div class="card-destination-body">
+              <h2 class="card-destination-title">Borobudur temple</h2>
+              <div class="card-destination-location">
+                <i class="ph-bold ph-map-pin text-base"></i>
+                <p>Central Java</p>
+              </div>
+            </div>
+          </div>
+          <!-- card 3 -->
+          <div class="card-destination">
+            <img
+              src="./src/assets/komodo.jpg"
+              alt="Komodo Island"
+              class="card-destination-img"
+            />
+            <div class="card-destination-overlay"></div>
+            <div class="card-destination-body">
+              <h2 class="card-destination-title">Komodo Island</h2>
+              <div class="card-destination-location">
+                <i class="ph-bold ph-map-pin text-base"></i>
+                <p>East Nusa Tenggara</p>
+              </div>
+            </div>
+          </div>
+          <!-- card 4 -->
+          <div class="card-destination">
+            <img
+              src="./src/assets/ijen.jpg"
+              alt="Mount Ijen"
+              class="card-destination-img"
+            />
+            <div class="card-destination-overlay"></div>
+            <div class="card-destination-body">
+              <h2 class="card-destination-title">Mount Ijen</h2>
+              <div class="card-destination-location">
+                <i class="ph-bold ph-map-pin text-base"></i>
+                <p>East Java</p>
+              </div>
+            </div>
+          </div>
+          <!-- card 5 -->
+          <div class="card-destination">
+            <img
+              src="./src/assets/wakatobi.jpg"
+              alt="Wakatobi"
+              class="card-destination-img"
+            />
+            <div class="card-destination-overlay"></div>
+            <div class="card-destination-body">
+              <h2 class="card-destination-title">Wakatobi</h2>
+              <div class="card-destination-location">
+                <i class="ph-bold ph-map-pin text-base"></i>
+                <p>Southeast Sulawesi</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- card 6 -->
+          <div class="card-destination">
+            <img
+              src="./src/assets/Nusapenida.jpg"
+              alt="Nusa Penida"
+              class="card-destination-img"
+            />
+            <div class="card-destination-overlay"></div>
+            <div class="card-destination-body">
+              <h2 class="card-destination-title">Nusa Penida</h2>
+              <div class="card-destination-location">
+                <i class="ph-bold ph-map-pin text-base"></i>
+                <p>Bali</p>
+              </div>
+            </div>
+          </div>
+          <!-- card 7 -->
+          <div class="card-destination">
+            <img
+              src="./src/assets/toba.jpg"
+              alt="Lake Toba"
+              class="card-destination-img"
+            />
+            <div class="card-destination-overlay"></div>
+            <div class="card-destination-body">
+              <h2 class="card-destination-title">Lake Toba</h2>
+              <div class="card-destination-location">
+                <i class="ph-bold ph-map-pin text-base"></i>
+                <p>North Sumatra</p>
+              </div>
+            </div>
+          </div>
+          <!-- card 8 -->
+          <div class="card-destination">
+            <img
+              src="./src/assets/uluwatu.jpg"
+              alt="Uluwatu"
+              class="card-destination-img"
+            />
+            <div class="card-destination-overlay"></div>
+            <div class="card-destination-body">
+              <h2 class="card-destination-title">Uluwatu</h2>
+              <div class="card-destination-location">
+                <i class="ph-bold ph-map-pin text-base"></i>
+                <p>Bali</p>
+              </div>
+            </div>
+          </div>
+          <!-- end -->
+        </div>
+      </section>
+    </main>
+    <footer id="footer" class="bg-green-800 mt-24 w-full">
+      <div
+        class="max-w-400 mx-auto px-5 md:px-10 py-10 flex flex-col md:flex-row items-center justify-between gap-8"
+      >
+        <!-- LOGO -->
+
+        <div
+          class="flex flex-col items-center md:items-start text-center md:text-left"
+        >
+          <div
+            class="flex flex-col items-center md:items-start text-center md:text-left"
+          >
+            <div class="flex items-center gap-2 hover:scale-105 transition">
+              <img src="./src/assets/Logo.png" alt="JelajahIndo" class="w-8" />
+
+              <h1 class="font-serif text-xl md:text-2xl text-white">
+                JelajahIndo
+              </h1>
+            </div>
+          </div>
+          <p
+            class="font-sans text-white text-[10px] md:text-sm font-medium pt-2 max-w-65"
+          >
+            Explore the beauty, culture, and nature of Indonesia.
+          </p>
+        </div>
+
+        <!-- LINKS -->
+        <nav class="hidden md:flex gap-6 font-semibold text-white items-center">
+          <a href="./index.htm">Home</a>
+          <a href="./destination.html"> Destination </a>
+          <a href="./about.html">About</a>
+          <a href="./article.html">Article</a>
+        </nav>
+      </div>
+
+      <!-- COPYRIGHT -->
+
+      <div class="border-t border-white/30 py-4 text-center">
+        <p class="text-[9px] md:text-sm text-white">
+          ©2026 JelajahIndo. All Right Reserved
+        </p>
+      </div>
+    </footer>
+    <script src="./script.js"></script>
+  </body>
+</html>

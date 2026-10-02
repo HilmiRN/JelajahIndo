@@ -1,18 +1,73 @@
 @import "tailwindcss";
 
 @utility bg-hero-pattern {
-  background-image: 
-    linear-gradient(125deg, rgba(255, 255, 255, 0.9) 10%, rgba(255, 255, 255, 0.5) 65%, rgba(255, 255, 255, 0) 80%), 
-    url('./assets/hero-background.jpg');
+  background-image:
+    linear-gradient(
+      125deg,
+      rgba(255, 255, 255, 0.9) 10%,
+      rgba(255, 255, 255, 0.5) 65%,
+      rgba(255, 255, 255, 0) 80%
+    ),
+    url("./assets/hero-background.jpg");
 }
 @theme {
-    --font-monomakh: "Monomakh", system-ui, sans-serif;
-    --font-jakarta: "Plus Jakarta Sans", sans-serif;
-    --color-green: #0F6B3A;
+  --font-monomakh: "Monomakh", system-ui, sans-serif;
+  --font-jakarta: "Plus Jakarta Sans", sans-serif;
+  --color-green: #0f6b3a;
 }
-.btn{
-  @apply inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-green text-white font-medium transition-colors inline-flex
-}
+
 @utility bg-overlay-dark {
-  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.2) 60%, transparent);
+  background-image: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.85),
+    rgba(0, 0, 0, 0.2) 60%,
+    transparent
+  );
+}
+@utility bg-green-image {
+  background-image: 
+    linear-gradient(
+      180deg,
+      var(--color-green, #0f6b3a) 0%,
+      rgb(15 107 58 / 0.9) 50%,
+      transparent 100%
+    ),
+    url("./assets/komodo.jpg");
+  background-size: cover;
+  background-position: center;
+  @media (min-width: 768px) {
+    background-image: 
+      linear-gradient(
+        90deg,
+        transparent 25%,
+        rgb(15 107 58 / 0.9) 50%,
+        var(--color-green, #0f6b3a) 100%
+      ),
+      url("./assets/komodo.jpg");
+  }
+}
+.btn {
+  @apply items-center gap-2 px-6 py-3 rounded-xl bg-green text-white font-medium transition-colors inline-flex;
+}
+.card-destination {
+  @apply relative w-full h-50 md:h-100 rounded-3xl overflow-hidden;
+}
+.card-destination-img {
+  @apply w-full h-full object-cover bottom;
+}
+
+.card-destination-overlay {
+  @apply absolute inset-0 bg-overlay-dark;
+}
+
+.card-destination-body {
+  @apply absolute bottom-0 left-0 right-0 p-6 text-white flex flex-col gap-1;
+}
+
+.card-destination-title {
+  @apply text-2xl md:text-2xl font-bold font-jakarta uppercase;
+}
+
+.card-destination-location {
+  @apply flex items-center gap-1.5 text-sm text-gray-200 capitalize;
 }
