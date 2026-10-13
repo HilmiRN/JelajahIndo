@@ -21,7 +21,7 @@
   <body class="font-jakarta text-gray-800">
     <!-- Header -->
     <header
-      class="flex justify-between items-center px-5 py-4 md:px-20 bg-white/80 backdrop-blur-md mx-auto w-full relative z-9 md:fixed"
+      class="flex justify-between items-center px-5 py-4 md:px-20 bg-white/80 backdrop-blur-md mx-auto w-full relative z-9 md:sticky top-0"
     >
       <img src="./src/assets/logo2.svg" alt="JelajahIndo Logo" class="h-10" />
 
@@ -89,52 +89,65 @@
 
         <!-- Floating Info Cards -->
         <div
-          class="absolute left-1/2 -translate-x-1/2 bottom-0 translate-y-1/2 w-[calc(100%-2.5rem)] max-w-5xl bg-white text-gray-800 p-5 md:p-6 shadow-xl rounded-2xl flex flex-col md:flex-row gap-6"
+          class="absolute left-1/2 -translate-x-1/2 bottom-0 translate-y-3/4 w-[calc(100%-2.5rem)] md:translate-y-1/2 max-w-5xl bg-white text-gray-800 p-5 md:p-6 shadow-xl rounded-2xl flex flex-col md:flex-row gap-6"
         >
-          <!-- Item 1 -->
-          <div class="flex items-center gap-4 text-left">
-            <div class="p-2.5 bg-green-50 text-green rounded-xl">
-              <i class="ph ph-leaf text-2xl"></i>
+          <!-- Card 1 -->
+
+          <div
+            class="flex items-center gap-4 p-5 rounded-2xl cursor-pointer hover:bg-gray-100 hover:-translate-y-2 hover:shadow-xl transition-all duration-500"
+          >
+            <div
+              class="w-14 h-14 flex items-center justify-center rounded-full bg-green-100 shrink-0"
+            >
+              <div class="p-2.5 text-green rounded-xl">
+                <i class="ph ph-leaf text-3xl"></i>
+              </div>
             </div>
+
             <div>
-              <h3 class="font-monomakh text-lg font-bold text-gray-900">
-                Explore Nature
-              </h3>
-              <p class="text-xs text-gray-500 mt-0.5">
-                Explore Indonesia’s beautiful nature.
-              </p>
+              <h3 class="text-lg md:text-xl font-serif">Explore Nature</h3>
+
+              <p class="mt-1 text-xs">Explore Indonesia's beautiful nature.</p>
             </div>
           </div>
 
-          <!-- Item 2 -->
+          <!-- Card 2 -->
+
           <div
-            class="flex items-center gap-4 text-left md:border-l md:border-gray-100 md:pl-6"
+            class="flex items-center gap-4 p-5 rounded-2xl cursor-pointer hover:bg-gray-100 hover:-translate-y-2 hover:shadow-xl transition-all duration-500"
           >
-            <div class="p-2.5 bg-green-50 text-green rounded-xl">
-              <i class="ph-bold ph-tree-evergreen text-2xl"></i>
+            <div
+              class="w-14 h-14 flex items-center justify-center rounded-full bg-green-100 shrink-0"
+            >
+              <div class="p-2.5 text-green rounded-xl">
+                <i class="ph-bold ph-tree-evergreen text-2xl"></i>
+              </div>
             </div>
+
             <div>
-              <h3 class="font-monomakh text-lg font-bold text-gray-900">
-                Discover Culture
-              </h3>
-              <p class="text-xs text-gray-500 mt-0.5">
-                Safe and comfortable journeys.
-              </p>
+              <h3 class="text-lg md:text-xl font-serif">Discover Culture</h3>
+
+              <p class="mt-1 text-xs">Safe and comfortable journeys.</p>
             </div>
           </div>
 
-          <!-- Item 3 -->
+          <!-- Card 3 -->
+
           <div
-            class="flex items-center gap-4 text-left md:border-l md:border-gray-100 md:pl-6"
+            class="flex items-center gap-4 p-5 rounded-2xl cursor-pointer hover:bg-gray-100 hover:-translate-y-2 hover:shadow-xl transition-all duration-500"
           >
-            <div class="p-2.5 bg-green-50 text-green rounded-xl">
-              <i class="ph-fill ph-handshake text-2xl"></i>
+            <div
+              class="w-14 h-14 flex items-center justify-center rounded-full bg-green-100 shrink-0"
+            >
+              <div class="p-2.5 text-green rounded-xl">
+                <i class="ph-fill ph-handshake text-2xl"></i>
+              </div>
             </div>
+
             <div>
-              <h3 class="font-monomakh text-lg font-bold text-gray-900">
-                Support Local
-              </h3>
-              <p class="text-xs text-gray-500 mt-0.5">
+              <h3 class="text-lg md:text-xl font-serif">Support Local</h3>
+
+              <p class="mt-1 text-xs">
                 Support local communities and businesses.
               </p>
             </div>
@@ -144,7 +157,7 @@
       <!-- Maps Section -->
       <section
         id="maps"
-        class="mt-50 mb-20 flex flex-col-reverse md:flex-row items-center gap-10 px-5 md:px-20 max-w-7xl mx-auto"
+        class="mt-100 md:mt-50 mb-20 flex flex-col-reverse md:flex-row items-center gap-10 px-5 md:px-20 max-w-7xl mx-auto"
       >
         <div class="w-full md:w-1/2 text-center md:text-left">
           <p
@@ -189,14 +202,17 @@
               Discover Our Tropical Paradise
             </h2>
           </div>
-          <a href="#" class="text-green font-bold flex items-center gap-1">
+          <a
+            href="./destination.html"
+            class="text-green font-bold flex items-center gap-1"
+          >
             See More Destinations
-            <i class="ph-bold ph-arrow-right"></i
-          ></a>
+            <i class="ph-bold ph-arrow-right"></i>
+          </a>
         </div>
         <div class="flex flex-col lg:flex-row w-full gap-10">
           <!-- card 1 -->
-          <div class="card-destination">
+          <div class="card-destination group">
             <img
               src="./src/assets/Labuanbajo.jpg"
               alt="Labuan Bajo"
@@ -209,10 +225,17 @@
                 <i class="ph-bold ph-map-pin text-base"></i>
                 <p>East Nusa Tenggara</p>
               </div>
+              <p class="card-destination-desc">
+                Labuan Bajo is a picturesque coastal town in Flores, Indonesia,
+                and the gateway to the famous Komodo National Park. Known for
+                its iconic Komodo dragons, dramatic viewpoints on Padar Island,
+                vibrant diving spots, and stunning pink beaches, it is the
+                ultimate paradise for island hoppers and adventurers.
+              </p>
             </div>
           </div>
           <!-- card 2 -->
-          <div class="card-destination">
+          <div class="card-destination group">
             <img
               src="./src/assets/borobudur.jpg"
               alt="Borobudur Temple"
@@ -225,11 +248,17 @@
                 <i class="ph-bold ph-map-pin text-base"></i>
                 <p>Central Java</p>
               </div>
+              <p class="card-destination-desc">
+                Borobudur Temple is a 9th-century UNESCO World Heritage Site in
+                Central Java, Indonesia, and the world's largest Buddhist
+                monument. Famous for its intricate relief panels, bell-shaped
+                stupas, and breathtaking sunrise views, Borobudur is an
+                unmissable destination for history and culture enthusiasts.
+              </p>
             </div>
           </div>
-
           <!-- card 3 -->
-          <div class="card-destination">
+          <div class="card-destination group">
             <img
               src="./src/assets/komodo.jpg"
               alt="Komodo Island"
@@ -242,6 +271,13 @@
                 <i class="ph-bold ph-map-pin text-base"></i>
                 <p>East Nusa Tenggara</p>
               </div>
+              <p class="card-destination-desc">
+                Komodo Island, part of the UNESCO World Heritage Site in East
+                Nusa Tenggara, is world-famous as the natural habitat of the
+                prehistoric Komodo dragon. Featuring dramatic rugged hills,
+                crystal-clear waters, and unique pink sand beaches, it offers an
+                unforgettable adventure into wild, untamed nature.
+              </p>
             </div>
           </div>
           <!-- end -->
@@ -363,9 +399,9 @@
             </p>
             <a
               href="#"
-              class="mt-4 inline-flex items-center gap-2 px-6 py-2.5 rounded-full border border-white bg-white/10 text-white hover:bg- white hover:text-green-900 transition-all"
+              class="mt-4 inline-flex items-center gap-2 px-6 py-2.5 rounded-full border border-white bg-white/10 text-white hover:bg-white hover:text-green-900 transition-all"
             >
-              <span>Explore Now</span>
+              Explore Now
               <i class="ph-bold ph-arrow-right transition-transform"></i>
             </a>
           </div>

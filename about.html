@@ -1,13 +1,13 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>JelajahIndo - About Us</title>
+
     <link rel="icon" type="image/png" href="./src/assets/logo.png" />
     <link rel="stylesheet" href="./src/output.css" />
-
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -18,27 +18,36 @@
     <!-- Phosphor Icons -->
     <script src="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.2"></script>
   </head>
-  <body class="font-jakarta text-gray-800">
-    <!-- Header -->
+
+  <body class="font-jakarta text-gray-800 bg-white overflow-x-hidden">
+    <!-- ================= HEADER ================= -->
+
     <header
-      class="flex justify-between items-center px-5 py-4 md:px-20 bg-white mx-auto w-full relative z-9 md:fixed"
+      class="flex justify-between items-center px-5 py-4 md:px-20 bg-white mx-auto w-full relative z-9 md:sticky md:top-0"
     >
       <img src="./src/assets/logo2.svg" alt="JelajahIndo Logo" class="h-10" />
 
-      <!-- Desktop -->
+      <!-- Desktop Nav -->
+
       <nav class="hidden md:flex gap-6 font-semibold">
         <a href="./index.htm">Home</a>
-        <a href="./destination.html"> Destination </a>
+        <a href="./destination.html">Destination</a>
         <a href="./about.html">About</a>
         <a href="./article.html">Article</a>
       </nav>
 
       <!-- Mobile Button -->
-      <button id="menu-button" class="md:hidden relative z-20">
+
+      <button
+        id="menu-button"
+        class="md:hidden relative z-20"
+        aria-label="Open menu"
+      >
         <i id="menu-icon" class="ph-bold ph-list text-3xl"></i>
       </button>
 
       <!-- Fullscreen Mobile Menu -->
+
       <div
         id="mobile-menu"
         class="fixed inset-0 z-8 h-screen w-screen bg-white/80 backdrop-blur-md -translate-x-full transition-transform duration-500 ease-in-out"
@@ -46,127 +55,250 @@
         <nav
           class="flex h-full flex-col items-center justify-center gap-8 text-2xl font-semibold"
         >
-          <a href="./index.htm" class="mobile-link"> Home </a>
-
-          <a href="./destination.html" class="mobile-link"> Destination </a>
-
-          <a href="./about.html" class="mobile-link"> About </a>
-
-          <a href="./article.html" class="mobile-link"> Article </a>
+          <a href="./index.htm" class="mobile-link">Home</a>
+          <a href="./destination.html" class="mobile-link">Destination</a>
+          <a href="./about.html" class="mobile-link">About</a>
+          <a href="./article.html" class="mobile-link">Article</a>
         </nav>
       </div>
     </header>
+
     <main>
-      <section>
-        <div class="mt-20">
-          <img
-            src="./src/assets/Rectangle-7.png"
-            alt=""
-            class="w-400 h-auto relative"
-          />
-        </div>
+      <section class="mt-16 md:mt-24 lg:mt-40 px-5 md:px-10 lg:px-20">
+        <div
+          class="max-w-350 mx-auto flex flex-col lg:flex-row items-center justify-between gap-10 lg:gap-20"
+        >
+          <div class="w-full lg:w-1/2">
+            <span
+              class="inline-block bg-gray-300 px-4 py-2 text-[11px] md:text-xs rounded-full text-green-600 hover:bg-green-700 hover:text-white hover:scale-105 transition-all duration-300"
+            >
+              ABOUT US
+            </span>
 
-        <div class="flex flex-col gap-5 absolute top-40 p-25">
-          <h1 class="font-serif text-white text-5xl max-w-150">
-            Stories, tips, and inspiration for adventure.
-          </h1>
-          <p class="font-serif text-white max-w-130 text-sm">
-            Discover a variety of engaging articles covering destinations,
-            travel tips, local cuisine, culture, and inspiring stories from
-            every corner of Indonesia.
-          </p>
-        </div>
-      </section>
+            <h1
+              class="mt-4 text-4xl md:text-5xl lg:text-[48px] font-serif leading-tight"
+            >
+              About Indonesia's Nature
+            </h1>
 
-      <!-- latest ariticle -->
-      <section>
-        <div class="p-20 mt-30 ml-20">
-          <h1 class="text-4xl border-l-4 pl-3">Latest Articles</h1>
-          <p class="text-sm max-w-80 pl-4">
-            Explore our curated articles for information, tips, and fascinating
-            stories from the world of travel.
-          </p>
-        </div>
-      </section>
-      <!-- isi lates articles -->
-      <section>
-        <div class="flex flex-row ml-20">
-          <div>
+            <p class="mt-5 max-w-xl text-sm md:text-base font-light leading-7">
+              Indonesia is a country blessed with extraordinary natural beauty,
+              from lush tropical forests and majestic mountains to pristine
+              beaches and crystal-clear seas. With thousands of islands
+              stretching from Sabang to Merauke, Indonesia offers diverse
+              destinations and ecosystems waiting to be explored.
+            </p>
+
+            <a
+              href="#story"
+              class="mt-6 inline-block bg-green-700 px-5 py-3 rounded-full text-white text-sm hover:bg-green-800 hover:-translate-y-1 hover:shadow-xl transition-all duration-300"
+            >
+              Explore Our Story →
+            </a>
+          </div>
+
+          <!-- Image -->
+
+          <div class="w-full lg:w-1/2 flex justify-center">
             <img
-              src="./src/assets/ranuk 1.png"
-              alt=""
-              class="pl-20 bottom-30 w-180 h-auto"
+              src="./src/assets/hero-background.jpg"
+              alt="Indonesia Nature"
+              class="w-full max-w-115 h-80 md:h-100 lg:h-115 object-cover rounded-3xl shadow-xl transition-all duration-700 hover:scale-105 hover:-rotate-1"
             />
           </div>
+        </div>
+      </section>
+      <section class="mt-14 md:mt-20 px-5 md:px-10 lg:px-20">
+        <div
+          class="max-w-150 mx-auto lg:mx-0 bg-gray-300 rounded-2xl p-5 md:p-7 hover:shadow-xl hover:-translate-y-1 transition-all duration-500"
+        >
+          <div class="grid grid-cols-3 divide-x divide-gray-400">
+            <!-- Islands -->
 
-          <div class="flex flex-col pl-20">
-            <button class="bg-gray-400 rounded-2xl text-[12px] w-23">
-              DESTINASI
-            </button>
-            <h1 class="text-[24px] max-w-75 font-medium pt-3">
-              5 Best Nature Destinations in Indonesia You Must Visit
-            </h1>
-            <p class="max-w-120 font-normal pt-10">
-              From the beauty of the mountains to the charm of the beaches,
-              Indonesia boasts many breathtaking natural destinations. Here are
-              five places that belong on your travel bucket list.
-            </p>
-            <p class="text-sm pb-5 pt-5">12 Sep 2025</p>
-            <button class="bg-green-800 w-45 h-10 rounded-2xl text-white">
-              Read more →
-            </button>
+            <div class="flex flex-col items-center text-center px-2">
+              <h2 class="text-2xl md:text-4xl text-green-600 font-serif">
+                17,000
+              </h2>
+
+              <p class="mt-1 text-[9px] md:text-xs text-green-600">ISLANDS</p>
+            </div>
+
+            <!-- National Parks -->
+
+            <div class="flex flex-col items-center text-center px-2">
+              <h2 class="text-2xl md:text-4xl text-green-600 font-serif">50</h2>
+
+              <p class="mt-1 text-[9px] md:text-xs text-green-600">
+                NATIONAL PARKS
+              </p>
+            </div>
+
+            <!-- Time Zones -->
+
+            <div class="flex flex-col items-center text-center px-2">
+              <h2 class="text-2xl md:text-4xl text-green-600 font-serif">3</h2>
+
+              <p class="mt-1 text-[9px] md:text-xs text-green-600">
+                TIME ZONES
+              </p>
+            </div>
           </div>
         </div>
       </section>
 
-      <!-- other articles -->
-      <section>
-        <div class="p-20 mt-12 ml-15">
-          <h1 class="text-4xl border-l-4 pl-3">Other Articles</h1>
-          <p class="text-sm max-w-80 pl-4">
-            Don't miss out on other interesting articles that can broaden your
-            horizons and inspire your travels
-          </p>
+      <!-- ================= FEATURES ================= -->
+
+      <section class="mt-14 md:mt-24">
+        <div
+          class="max-w-350 mx-auto px-5 md:px-10 lg:px-20 grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-10"
+        >
+          <!-- Card 1 -->
+
+          <div
+            class="flex items-center gap-4 p-5 rounded-2xl cursor-pointer hover:bg-gray-100 hover:-translate-y-2 hover:shadow-xl transition-all duration-500"
+          >
+            <div
+              class="w-14 h-14 flex items-center justify-center rounded-full bg-green-100 shrink-0"
+            >
+              <div class="p-2.5 text-green rounded-xl">
+                <i class="ph ph-leaf text-3xl"></i>
+              </div>
+            </div>
+
+            <div>
+              <h3 class="text-lg md:text-xl font-serif">Explore Nature</h3>
+
+              <p class="mt-1 text-xs">Explore Indonesia's beautiful nature.</p>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+
+          <div
+            class="flex items-center gap-4 p-5 rounded-2xl cursor-pointer hover:bg-gray-100 hover:-translate-y-2 hover:shadow-xl transition-all duration-500"
+          >
+            <div
+              class="w-14 h-14 flex items-center justify-center rounded-full bg-green-100 shrink-0"
+            >
+              <div class="p-2.5 text-green rounded-xl">
+                <i class="ph-bold ph-tree-evergreen text-2xl"></i>
+              </div>
+            </div>
+
+            <div>
+              <h3 class="text-lg md:text-xl font-serif">Discover Culture</h3>
+
+              <p class="mt-1 text-xs">Safe and comfortable journeys.</p>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+
+          <div
+            class="flex items-center gap-4 p-5 rounded-2xl cursor-pointer hover:bg-gray-100 hover:-translate-y-2 hover:shadow-xl transition-all duration-500"
+          >
+            <div
+              class="w-14 h-14 flex items-center justify-center rounded-full bg-green-100 shrink-0"
+            >
+              <div class="p-2.5 text-green rounded-xl">
+                <i class="ph-fill ph-handshake text-2xl"></i>
+              </div>
+            </div>
+
+            <div>
+              <h3 class="text-lg md:text-xl font-serif">Support Local</h3>
+
+              <p class="mt-1 text-xs">
+                Support local communities and businesses.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= STORY ================= -->
+
+      <section id="story" class="mt-28 md:mt-36 lg:mt-44 scroll-mt-24">
+        <div
+          class="max-w-350 mx-auto flex flex-col lg:flex-row items-center"
+        >
+          <!-- Text -->
+
+          <div class="w-full lg:w-[55%] px-5 md:px-10 lg:pl-16">
+            <p class="text-xs text-green-700 tracking-widest">
+              NATURE - PEOPLE - FUTURE
+            </p>
+
+            <h2
+              class="mt-4 text-3xl md:text-4xl lg:text-[38px] leading-tight font-serif"
+            >
+              More Than Just a Destination,
+              <span class="text-green-700">It's a responsibility</span>
+            </h2>
+
+            <p class="mt-5 max-w-3xl text-sm md:text-base leading-7">
+              Indonesia's natural beauty is a precious gift. Through responsible
+              travel, we can protect our environment, empower local communities,
+              and ensure these landscapes remain vibrant for generations to
+              come.
+            </p>
+
+            <a
+              href="./article.html"
+              class="mt-5 inline-block px-5 py-2.5 border border-green-700 text-green-700 rounded-full hover:bg-green-700 hover:text-white hover:-translate-y-1 transition-all duration-300"
+            >
+              Learn More →
+            </a>
+          </div>
+
+          <!-- Image -->
+
+          <div class="w-full lg:w-[50%] mt-10 lg:mt-0 overflow-hidden">
+            <img
+              src="./src/assets/bromo.jpg"
+              alt="Indonesian Mountain"
+              class="w-full h-70 md:h-100 lg:h-125 object-cover rounded-xl lg:rounded-4xl"
+            />
+          </div>
         </div>
       </section>
     </main>
+
+    <!-- ================= FOOTER ================= -->
+
     <footer id="footer" class="bg-green-800 mt-24 w-full">
       <div
         class="max-w-400 mx-auto px-5 md:px-10 py-10 flex flex-col md:flex-row items-center justify-between gap-8"
       >
-        <!-- LOGO -->
+        <!-- Logo -->
 
         <div
           class="flex flex-col items-center md:items-start text-center md:text-left"
         >
-          <div
-            class="flex flex-col items-center md:items-start text-center md:text-left"
-          >
-            <div class="flex items-center gap-2 hover:scale-105 transition">
-              <img src="./src/assets/Logo.png" alt="JelajahIndo" class="w-8" />
+          <div class="flex items-center gap-2 hover:scale-105 transition">
+            <img src="./src/assets/Logo.png" alt="JelajahIndo" class="w-8" />
 
-              <h1 class="font-serif text-xl md:text-2xl text-white">
-                JelajahIndo
-              </h1>
-            </div>
+            <p class="font-serif text-xl md:text-2xl text-white">JelajahIndo</p>
           </div>
+
           <p
-            class="font-sans text-white text-[10px] md:text-sm font-medium pt-2 max-w-65"
+            class="text-white text-[10px] md:text-sm font-medium pt-2 max-w-65"
           >
             Explore the beauty, culture, and nature of Indonesia.
           </p>
         </div>
 
-        <!-- LINKS -->
+        <!-- Links -->
+
         <nav class="hidden md:flex gap-6 font-semibold text-white items-center">
           <a href="./index.htm">Home</a>
-          <a href="./destination.html"> Destination </a>
+          <a href="./destination.html">Destination</a>
           <a href="./about.html">About</a>
           <a href="./article.html">Article</a>
         </nav>
       </div>
 
-      <!-- COPYRIGHT -->
+      <!-- Copyright -->
 
       <div class="border-t border-white/30 py-4 text-center">
         <p class="text-[9px] md:text-sm text-white">
@@ -174,5 +306,9 @@
         </p>
       </div>
     </footer>
+
+    <!-- ================= MOBILE MENU JS ================= -->
+
+    <script src="./script.js"></script>
   </body>
 </html>

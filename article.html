@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>JelajahIndo - Explore Indonesian Nature</title>
+    <title>JelajahIndo || About</title>
     <link rel="icon" type="image/png" href="./src/assets/logo.png" />
     <link rel="stylesheet" href="./src/output.css" />
 
@@ -17,44 +17,149 @@
 
     <!-- Phosphor Icons -->
     <script src="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.2"></script>
-  </head>
-  <body class="font-jakarta text-gray-800">
-    <!-- Header -->
-    <header
-      class="flex justify-between items-center px-5 py-4 md:px-20 bg-white/80 backdrop-blur-md mx-auto w-full relative z-9 md:fixed"
-    >
-      <img src="./src/assets/logo2.svg" alt="JelajahIndo Logo" class="h-10" />
 
-      <!-- Desktop -->
+    <style>
+      .reveal {
+        opacity: 0;
+        transform: translateY(40px);
+        transition: all 0.8s ease;
+      }
+
+      .reveal.active {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        *,
+        *::before,
+        *::after {
+          animation-duration: 0.01ms !important;
+          transition-duration: 0.01ms !important;
+        }
+      }
+    </style>
+  </head>
+
+  <body class="font-jakarta text-gray-800 bg-white overflow-x-hidden">
+    <!-- header-->
+    <header
+      class="flex justify-between items-center px-5 py-4 md:px-20 bg-white/90 backdrop-blur-md mx-auto w-full relative z-30 md:fixed top-0 left-0 border-b border-gray-100"
+    >
+      <a href="./index.htm" class="flex items-center gap-2">
+        <img src="./src/assets/logo2.svg" alt="JelajahIndo Logo" class="h-10" />
+      </a>
+
+      <!-- Desktop Navigation -->
       <nav class="hidden md:flex gap-6 font-semibold">
-        <a href="./index.htm">Home</a>
-        <a href="./destination.html"> Destination </a>
-        <a href="./about.html">About</a>
-        <a href="./article.html">Article</a>
+        <a href="./index.htm" class="hover:text-green-700 transition-colors"
+          >Home</a
+        >
+        <a
+          href="./destination.html"
+          class="hover:text-green-700 transition-colors"
+          >Destination</a
+        >
+        <a href="./about.html" class="hover:text-green-700 transition-colors"
+          >About</a
+        >
+        <a href="./article.html" class="hover:text-green-700 transition-colors"
+          >Article</a
+        >
       </nav>
 
       <!-- Mobile Button -->
-      <button id="menu-button" class="md:hidden relative z-20">
+      <button
+        id="menu-button"
+        class="md:hidden relative z-40 p-1 focus:outline-none"
+        aria-label="Toggle Menu"
+      >
         <i id="menu-icon" class="ph-bold ph-list text-3xl"></i>
       </button>
 
       <!-- Fullscreen Mobile Menu -->
       <div
         id="mobile-menu"
-        class="fixed inset-0 z-8 h-screen w-screen bg-white -translate-x-full transition-transform duration-500 ease-in-out"
+        class="fixed inset-0 z-30 h-screen w-screen bg-white/95 backdrop-blur-md -translate-x-full transition-transform duration-500 ease-in-out"
       >
         <nav
           class="flex h-full flex-col items-center justify-center gap-8 text-2xl font-semibold"
         >
-          <a href="./index.htm" class="mobile-link"> Home </a>
-
-          <a href="./destination.html" class="mobile-link"> Destination </a>
-
-          <a href="./about.html" class="mobile-link"> About </a>
-
-          <a href="./article.html" class="mobile-link"> Article </a>
+          <a
+            href="./index.htm"
+            class="mobile-link hover:text-green-700 transition-colors"
+            >Home</a
+          >
+          <a
+            href="./destination.html"
+            class="mobile-link hover:text-green-700 transition-colors"
+            >Destination</a
+          >
+          <a
+            href="./about.html"
+            class="mobile-link hover:text-green-700 transition-colors"
+            >About</a
+          >
+          <a
+            href="./article.html"
+            class="mobile-link hover:text-green-700 transition-colors"
+            >Article</a
+          >
         </nav>
       </div>
     </header>
+    <!-- ================= FOOTER ================= -->
+    <footer id="footer" class="bg-green-800 mt-24 w-full">
+      <div
+        class="max-w-350 mx-auto px-5 md:px-10 py-10 flex flex-col md:flex-row items-center justify-between gap-8"
+      >
+        <!-- LOGO -->
+        <div
+          class="flex flex-col items-center md:items-start text-center md:text-left"
+        >
+          <div class="flex items-center gap-2 hover:scale-105 transition">
+            <img src="./src/assets/logo.png" alt="JelajahIndo" class="w-8" />
+            <h1 class="font-serif text-xl md:text-2xl text-white">
+              JelajahIndo
+            </h1>
+          </div>
+          <p
+            class="font-sans text-white text-[10px] md:text-sm font-medium pt-2 max-w-65"
+          >
+            Explore the beauty, culture, and nature of Indonesia.
+          </p>
+        </div>
+
+        <!-- LINKS -->
+        <nav class="hidden md:flex gap-6 font-semibold text-white items-center">
+          <a href="./index.htm" class="hover:text-green-200 transition-colors"
+            >Home</a
+          >
+          <a
+            href="./destination.html"
+            class="hover:text-green-200 transition-colors"
+            >Destination</a
+          >
+          <a href="./about.html" class="hover:text-green-200 transition-colors"
+            >About</a
+          >
+          <a
+            href="./article.html"
+            class="hover:text-green-200 transition-colors"
+            >Article</a
+          >
+        </nav>
+      </div>
+
+      <!-- COPYRIGHT -->
+      <div class="border-t border-white/30 py-4 text-center">
+        <p class="text-[9px] md:text-sm text-white">
+          ©2026 JelajahIndo. All Right Reserved
+        </p>
+      </div>
+    </footer>
+
+    <!-- ================= JAVASCRIPT ================= -->
+    <script src="./script.js"></script>
   </body>
 </html>
