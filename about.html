@@ -3,11 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <title>JelajahIndo - About Us</title>
-
+    <title>JelajahIndo || About Us</title>
     <link rel="icon" type="image/png" href="./src/assets/logo.png" />
     <link rel="stylesheet" href="./src/output.css" />
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -20,49 +19,61 @@
   </head>
 
   <body class="font-jakarta text-gray-800 bg-white overflow-x-hidden">
-    <!-- ================= HEADER ================= -->
-
     <header
-      class="flex justify-between items-center px-5 py-4 md:px-20 bg-white mx-auto w-full relative z-9 md:sticky md:top-0"
+      class="flex justify-between items-center px-5 py-4 md:px-20 bg-white/90 backdrop-blur-md mx-auto w-full relative z-30 md:fixed top-0 left-0 border-b border-gray-100"
     >
-      <img src="./src/assets/logo2.svg" alt="JelajahIndo Logo" class="h-10" />
-
-      <!-- Desktop Nav -->
+      <a href="./index.htm" class="flex items-center gap-2 group">
+        <img
+          src="./src/assets/logo2.svg"
+          alt="JelajahIndo Logo"
+          class="h-10 transition-transform duration-300 group-hover:scale-105"
+        />
+      </a>
 
       <nav class="hidden md:flex gap-6 font-semibold">
-        <a href="./index.htm">Home</a>
-        <a href="./destination.html">Destination</a>
-        <a href="./about.html">About</a>
-        <a href="./article.html">Article</a>
+        <a
+          href="./index.htm"
+          class="relative py-1 hover:text-green-700 transition-colors"
+          >Home</a
+        >
+        <a
+          href="./destination.html"
+          class="relative py-1 hover:text-green-700 transition-colors"
+          >Destination</a
+        >
+        <a
+          href="./about.html"
+          class="relative py-1 text-green after:absolute after:left-0 after:bottom-0 after:h-0.5 after:w-full after:rounded-full after:bg-green-800"
+          >About</a
+        >
+        <a
+          href="./article.html"
+          class="relative py-1 hover:text-green-700 transition-colors"
+        >
+          Article
+        </a>
       </nav>
 
-      <!-- Mobile Button -->
-
-      <button
-        id="menu-button"
-        class="md:hidden relative z-20"
-        aria-label="Open menu"
-      >
+      <button id="menu-button" class="md:hidden relative z-40 p-1">
         <i id="menu-icon" class="ph-bold ph-list text-3xl"></i>
       </button>
 
-      <!-- Fullscreen Mobile Menu -->
-
       <div
         id="mobile-menu"
-        class="fixed inset-0 z-8 h-screen w-screen bg-white/80 backdrop-blur-md -translate-x-full transition-transform duration-500 ease-in-out"
+        class="fixed inset-0 z-30 h-screen w-screen bg-white/95 backdrop-blur-md -translate-x-full transition-transform duration-500 ease-in-out"
       >
         <nav
           class="flex h-full flex-col items-center justify-center gap-8 text-2xl font-semibold"
         >
-          <a href="./index.htm" class="mobile-link">Home</a>
-          <a href="./destination.html" class="mobile-link">Destination</a>
-          <a href="./about.html" class="mobile-link">About</a>
-          <a href="./article.html" class="mobile-link">Article</a>
+          <a href="./index.htm">Home</a>
+          <a href="./destination.html">Destination</a>
+          <a href="./about.html" class="text-green-700 transition-colors"
+            >About</a
+          >
+          <a href="./article.html">Article</a>
         </nav>
       </div>
     </header>
-
     <main>
       <section class="mt-16 md:mt-24 lg:mt-40 px-5 md:px-10 lg:px-20">
         <div
@@ -145,9 +156,6 @@
           </div>
         </div>
       </section>
-
-      <!-- ================= FEATURES ================= -->
-
       <section class="mt-14 md:mt-24">
         <div
           class="max-w-350 mx-auto px-5 md:px-10 lg:px-20 grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-10"
@@ -218,10 +226,8 @@
 
       <!-- ================= STORY ================= -->
 
-      <section id="story" class="mt-28 md:mt-36 lg:mt-44 scroll-mt-24">
-        <div
-          class="max-w-350 mx-auto flex flex-col lg:flex-row items-center"
-        >
+      <section id="story" class="mt-28 md:mt-36 lg:mt-44 px-5 md:px-25">
+        <div class="max-w-350 mx-auto flex flex-col lg:flex-row items-center">
           <!-- Text -->
 
           <div class="w-full lg:w-[55%] px-5 md:px-10 lg:pl-16">

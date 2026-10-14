@@ -91,3 +91,42 @@
 .card-destination-desc {
   @apply hidden md:block max-h-0 translate-y-6 overflow-hidden text-xs md:text-sm text-gray-200 transition-all duration-1000 ease-in-out md:group-hover:max-h-40 md:group-hover:translate-y-0 md:group-hover:mt-2;
 }
+.article-card {
+  /* Note: 'group' dipasang di HTML agar tidak error di Tailwind */
+  @apply bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl 
+         transition-all duration-500 flex flex-col justify-between h-full;
+}
+
+/* article css */
+.article-img-wrapper {
+  @apply overflow-hidden h-52 md:h-56 w-full;
+}
+
+.article-img {
+  @apply w-full h-full object-cover transition-transform duration-500 group-hover:scale-105;
+}
+
+.article-body {
+  @apply p-6 flex flex-col justify-between grow;
+}
+
+.article-category {
+  @apply text-green-800 text-[10px] font-bold tracking-wider uppercase;
+}
+
+.article-title {
+  @apply text-xl font-bold font-jakarta text-gray-900 mt-2 line-clamp-2;
+}
+
+.article-desc {
+  @apply text-sm text-gray-500 mt-3 leading-relaxed;
+}
+
+.article-btn {
+  @apply inline-flex items-center text-green-800 text-sm font-semibold mt-5 
+         cursor-pointer w-fit transition-colors hover:text-green-900;
+}
+
+.article-arrow {
+  @apply inline-block ml-1 transition-transform duration-300 group-hover:translate-x-1;
+}

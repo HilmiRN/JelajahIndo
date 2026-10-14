@@ -3,10 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>JelajahIndo || About</title>
+    <title>JelajahIndo || Article</title>
     <link rel="icon" type="image/png" href="./src/assets/logo.png" />
     <link rel="stylesheet" href="./src/output.css" />
-
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -17,67 +16,48 @@
 
     <!-- Phosphor Icons -->
     <script src="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.2"></script>
-
-    <style>
-      .reveal {
-        opacity: 0;
-        transform: translateY(40px);
-        transition: all 0.8s ease;
-      }
-
-      .reveal.active {
-        opacity: 1;
-        transform: translateY(0);
-      }
-
-      @media (prefers-reduced-motion: reduce) {
-        *,
-        *::before,
-        *::after {
-          animation-duration: 0.01ms !important;
-          transition-duration: 0.01ms !important;
-        }
-      }
-    </style>
   </head>
 
   <body class="font-jakarta text-gray-800 bg-white overflow-x-hidden">
-    <!-- header-->
     <header
       class="flex justify-between items-center px-5 py-4 md:px-20 bg-white/90 backdrop-blur-md mx-auto w-full relative z-30 md:fixed top-0 left-0 border-b border-gray-100"
     >
-      <a href="./index.htm" class="flex items-center gap-2">
-        <img src="./src/assets/logo2.svg" alt="JelajahIndo Logo" class="h-10" />
+      <a href="./index.htm" class="flex items-center gap-2 group">
+        <img
+          src="./src/assets/logo2.svg"
+          alt="JelajahIndo Logo"
+          class="h-10 transition-transform duration-300 group-hover:scale-105"
+        />
       </a>
 
-      <!-- Desktop Navigation -->
       <nav class="hidden md:flex gap-6 font-semibold">
-        <a href="./index.htm" class="hover:text-green-700 transition-colors"
+        <a
+          href="./index.htm"
+          class="relative py-1 hover:text-green-700 transition-colors"
           >Home</a
         >
         <a
           href="./destination.html"
-          class="hover:text-green-700 transition-colors"
+          class="relative py-1 hover:text-green-700 transition-colors"
           >Destination</a
         >
-        <a href="./about.html" class="hover:text-green-700 transition-colors"
+        <a
+          href="./about.html"
+          class="relative py-1 hover:text-green-700 transition-colors"
           >About</a
         >
-        <a href="./article.html" class="hover:text-green-700 transition-colors"
-          >Article</a
+        <a
+          href="./article.html"
+          class="relative py-1 text-green after:absolute after:left-0 after:bottom-0 after:h-0.5 after:w-full after:rounded-full after:bg-green-800"
         >
+          Article
+        </a>
       </nav>
 
-      <!-- Mobile Button -->
-      <button
-        id="menu-button"
-        class="md:hidden relative z-40 p-1 focus:outline-none"
-        aria-label="Toggle Menu"
-      >
+      <button id="menu-button" class="md:hidden relative z-40 p-1">
         <i id="menu-icon" class="ph-bold ph-list text-3xl"></i>
       </button>
 
-      <!-- Fullscreen Mobile Menu -->
       <div
         id="mobile-menu"
         class="fixed inset-0 z-30 h-screen w-screen bg-white/95 backdrop-blur-md -translate-x-full transition-transform duration-500 ease-in-out"
@@ -85,29 +65,336 @@
         <nav
           class="flex h-full flex-col items-center justify-center gap-8 text-2xl font-semibold"
         >
-          <a
-            href="./index.htm"
-            class="mobile-link hover:text-green-700 transition-colors"
-            >Home</a
-          >
-          <a
-            href="./destination.html"
-            class="mobile-link hover:text-green-700 transition-colors"
-            >Destination</a
-          >
-          <a
-            href="./about.html"
-            class="mobile-link hover:text-green-700 transition-colors"
-            >About</a
-          >
-          <a
-            href="./article.html"
-            class="mobile-link hover:text-green-700 transition-colors"
+          <a href="./index.htm">Home</a>
+          <a href="./destination.html">Destination</a>
+          <a href="./about.html">About</a>
+          <a href="./article.html" class="text-green-700 transition-colors"
             >Article</a
           >
         </nav>
       </div>
     </header>
+    <main>
+      <section
+        id="home"
+        class="relative min-h-150 md:min-h-165 lg:min-h-180 flex items-center overflow-hidden"
+      >
+        <!-- Background -->
+
+        <img
+          src="./src/assets/komodo.jpg"
+          alt="Nature Indonesia"
+          class="hero-image absolute inset-0 w-full h-full object-cover"
+        />
+
+        <!-- Overlay hitam -->
+
+        <div
+          class="absolute inset-0 bg-linear-to-r from-black/75 via-black/45 to-black/10"
+        ></div>
+        <!-- Content -->
+
+        <div
+          class="relative z-10 w-full max-w-350 mx-auto px-6 sm:px-10 lg:px-20"
+        >
+          <div class="max-w-3xl reveal">
+            <p
+              class="uppercase tracking-[5px] text-green-300 text-xs md:text-sm mb-5"
+            >
+              Explore Indonesia
+            </p>
+
+            <h1
+              class="text-white text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-tight"
+            >
+              Stories, tips, and inspiration for adventure.
+            </h1>
+
+            <p
+              class="text-white/85 max-w-xl text-sm md:text-base leading-7 mt-6"
+            >
+              Discover a variety of engaging articles covering destinations,
+              travel tips, local cuisine, culture, and inspiring stories from
+              every corner of Indonesia.
+            </p>
+
+            <div class="flex flex-wrap gap-4 mt-8">
+              <a
+                href="#article"
+                class="group bg-white text-green px-6 py-3 rounded-full text-sm font-medium hover:bg-green-800 hover:text-white transition duration-300"
+              >
+                Explore Articles
+                <i class="ph-bold ph-arrow-right pl-5"></i>
+              </a>
+
+              <a
+                href="#nature"
+                class="px-6 py-3 rounded-full border border-white/60 text-white text-sm hover:bg-white hover:text-green transition duration-300"
+              >
+                Discover Nature
+              </a>
+            </div>
+          </div>
+        </div>
+        <a
+          href="#"
+          class="absolute bottom-6 left-1/2 -translate-x-1/2 hidden md:flex flex-col items-center gap-1.5 text-[10px] tracking-[3px] text-white/60 hover:text-white transition-colors"
+        >
+          SCROLL
+          <i class="ph ph-arrow-down animate-bounce"></i>
+        </a>
+      </section>
+
+      <!-- about section -->
+
+      <section
+        id="about"
+        class="max-w-350 mx-auto px-6 sm:px-10 lg:px-20 py-20 md:py-28"
+      >
+        <div class="grid md:grid-cols-2 gap-12 lg:gap-20 items-center reveal">
+          <div>
+            <p class="text-green text-xs uppercase tracking-[4px] mb-4">
+              About JelajahIndo
+            </p>
+
+            <h2 class="font-monomakh text-4xl md:text-5xl lg:text-6xl">
+              Indonesia is more than a destination.
+            </h2>
+          </div>
+
+          <div>
+            <p class="text-gray-600 leading-8 text-sm md:text-base">
+              JelajahIndo hadir untuk membawa kamu lebih dekat dengan keindahan
+              alam, budaya, makanan, dan cerita unik dari berbagai daerah di
+              Indonesia.
+            </p>
+
+            <a
+              href="#article"
+              class="inline-flex mt-6 text-green font-medium hover:gap-4 gap-2 transition-all"
+            >
+              Read our stories →
+            </a>
+          </div>
+        </div>
+      </section>
+      <!-- article terbaru -->
+      <section
+        id="article"
+        class="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16 py-12 md:py-20"
+      >
+        <!-- Heading Section -->
+        <div class="mb-10 md:mb-14 reveal">
+          <div class="flex items-stretch gap-4">
+            <div class="w-1.5 bg-green-800 rounded-full"></div>
+            <div>
+              <h2
+                class="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 tracking-tight"
+              >
+                Latest Articles
+              </h2>
+              <p
+                class="text-sm sm:text-base text-gray-600 max-w-lg mt-2 leading-relaxed"
+              >
+                Explore our curated articles for information, tips, and
+                fascinating stories from the world of travel.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Featured Article Card -->
+        <article
+          id="nature"
+          class="group grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center bg-white p-6 sm:p-8 lg:p-10 rounded-3xl border border-gray-100 shadow-sm hover:shadow-lg transition-all duration-500"
+        >
+          <!-- Image Box -->
+          <div
+            class="lg:col-span-7 overflow-hidden rounded-2xl relative aspect-16/10 sm:aspect-video lg:aspect-4/3 w-full"
+          >
+            <img
+              src="./src/assets/Labuanbajo.jpg"
+              alt="Nature destination"
+              class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+            />
+            <!-- Gradient Overlay on Hover -->
+            <div
+              class="absolute inset-0 bg-linear-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
+            ></div>
+          </div>
+
+          <!-- Content Box -->
+          <div class="lg:col-span-5 flex flex-col items-start">
+            <span
+              class="inline-flex items-center bg-green-100/80 text-green-800 px-3.5 py-1.5 rounded-full text-xs font-bold tracking-widest uppercase border border-green-200/50"
+            >
+              DESTINASI
+            </span>
+
+            <h3
+              class="text-2xl sm:text-3xl lg:text-4xl font-bold mt-4 transition-colors duration-300"
+            >
+              5 Best Nature Destinations in Indonesia You Must Visit
+            </h3>
+
+            <p class="text-sm sm:text-base leading-relaxed mt-4">
+              From the beauty of the mountains to the charm of the beaches,
+              Indonesia boasts many breathtaking natural destinations. Here are
+              five places that belong on your travel bucket list.
+            </p>
+
+            <div class="flex items-center gap-2 text-xs font-medium mt-6">
+              <i class="ph-bold ph-calendar-blank text-sm"></i>
+              <time datetime="2025-09-12">12 Sep 2025</time>
+            </div>
+
+            <!-- Action Button -->
+            <a
+              href="./article1.html"
+              class="items-center gap-2 mt-6 bg-green-800 text-white px-6 py-3.5 rounded-full text-sm font-semibold hover:bg-green-500 transition-all duration-300 shadow-sm hover:shadow-md"
+            >
+              Read more
+              <i class="ph-bold ph-arrow-right"></i>
+            </a>
+          </div>
+        </article>
+      </section>
+
+      <!-- article lainnya -->
+
+      <section class="max-w-350 mx-auto px-6 sm:px-10 lg:px-20 py-20">
+        <div class="mb-12 reveal">
+          <div class="flex items-start gap-3">
+            <div class="w-1 h-12 bg-green-800 rounded-full"></div>
+
+            <div>
+              <h2 class="text-3xl md:text-4xl">Other Articles</h2>
+
+              <p class="text-sm text-gray-500 max-w-lg mt-3">
+                Don't miss out on other interesting articles that can broaden
+                your horizons and inspire your travels.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- article cards-->
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- CARD 1 -->
+          <article class="article-card group">
+            <div class="article-img-wrapper">
+              <img
+                src="./src/assets/komodo.jpg"
+                alt="Indonesia nature"
+                class="article-img"
+              />
+            </div>
+            <div class="article-body">
+              <div>
+                <span class="article-category">TRAVEL</span>
+                <h3 class="article-title">
+                  Exploring Hidden Beauty of Indonesia
+                </h3>
+                <p class="article-desc">
+                  Discover places that are still far from the crowds and full of
+                  natural beauty.
+                </p>
+              </div>
+              <button onclick="showArticle()" class="article-btn">
+                Read more <span class="article-arrow">→</span>
+              </button>
+            </div>
+          </article>
+
+          <!-- CARD 2 -->
+          <article class="article-card group">
+            <div class="article-img-wrapper">
+              <img
+                src="./src/assets/bromo.jpg"
+                alt="Mountain Indonesia"
+                class="article-img"
+              />
+            </div>
+            <div class="article-body">
+              <div>
+                <span class="article-category">NATURE</span>
+                <h3 class="article-title">The Charm of Indonesian Mountains</h3>
+                <p class="article-desc">
+                  Mountains, forests, and fresh air make Indonesia a perfect
+                  destination for nature lovers.
+                </p>
+              </div>
+              <button onclick="showArticle()" class="article-btn">
+                Read more <span class="article-arrow">→</span>
+              </button>
+            </div>
+          </article>
+
+          <!-- CARD 3 -->
+          <article class="article-card group">
+            <div class="article-img-wrapper">
+              <img
+                src="./src/assets/uluwatu.jpg"
+                alt="Indonesia travel"
+                class="article-img"
+              />
+            </div>
+            <div class="article-body">
+              <div>
+                <span class="article-category">CULTURE</span>
+                <h3 class="article-title">Stories Behind Indonesian Culture</h3>
+                <p class="article-desc">
+                  Explore the traditions, local communities, and stories that
+                  make Indonesia unique.
+                </p>
+              </div>
+              <button onclick="showArticle()" class="article-btn">
+                Read more <span class="article-arrow">→</span>
+              </button>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- CTA Section -->
+
+      <section class="px-6 sm:px-10 lg:px-20 pb-20">
+        <div
+          class="max-w-300 mx-auto bg-green-900 rounded-[30px] p-8 sm:p-12 lg:p-16 text-center relative overflow-hidden reveal"
+        >
+          <div
+            class="absolute -right-10 -top-10 w-40 h-40 rounded-full border border-white/10"
+          ></div>
+
+          <div
+            class="absolute -left-10 -bottom-10 w-32 h-32 rounded-full bg-white/5"
+          ></div>
+
+          <div class="relative">
+            <p class="text-green-300 text-xs tracking-[4px] uppercase">
+              Start Exploring
+            </p>
+
+            <h2 class="text-white text-3xl md:text-5xl mt-4">
+              Your next adventure starts here.
+            </h2>
+
+            <p class="text-white/70 text-sm max-w-lg mx-auto mt-5 leading-6">
+              Find inspiration, discover new places, and explore the beauty of
+              Indonesia.
+            </p>
+
+            <a
+              href="#home"
+              class="inline-block mt-7 bg-white text-green px-7 py-3 rounded-full font-semibold text-sm transition-all duration-300"
+            >
+              Explore JelajahIndo
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
     <!-- ================= FOOTER ================= -->
     <footer id="footer" class="bg-green-800 mt-24 w-full">
       <div
@@ -129,37 +416,21 @@
             Explore the beauty, culture, and nature of Indonesia.
           </p>
         </div>
-
-        <!-- LINKS -->
         <nav class="hidden md:flex gap-6 font-semibold text-white items-center">
           <a href="./index.htm" class="hover:text-green-200 transition-colors"
             >Home</a
           >
-          <a
-            href="./destination.html"
-            class="hover:text-green-200 transition-colors"
-            >Destination</a
-          >
-          <a href="./about.html" class="hover:text-green-200 transition-colors"
-            >About</a
-          >
-          <a
-            href="./article.html"
-            class="hover:text-green-200 transition-colors"
-            >Article</a
-          >
+          <a href="./destination.html">Destination</a>
+          <a href="./about.html">About</a>
+          <a href="./article.html">Article</a>
         </nav>
       </div>
-
-      <!-- COPYRIGHT -->
       <div class="border-t border-white/30 py-4 text-center">
         <p class="text-[9px] md:text-sm text-white">
           ©2026 JelajahIndo. All Right Reserved
         </p>
       </div>
     </footer>
-
-    <!-- ================= JAVASCRIPT ================= -->
     <script src="./script.js"></script>
   </body>
 </html>

@@ -1,12 +1,11 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>JelajahIndo || Destinations</title>
+    <title>JelajahIndo || Explore Indonesia</title>
     <link rel="icon" type="image/png" href="./src/assets/logo.png" />
     <link rel="stylesheet" href="./src/output.css" />
-
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -18,41 +17,60 @@
     <!-- Phosphor Icons -->
     <script src="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.2"></script>
   </head>
-  <body class="font-jakarta text-gray-800">
-    <!-- Header -->
-    <header
-      class="flex justify-between items-center px-5 py-4 md:px-20 bg-white mx-auto w-full relative z-9 md:sticky md:top-0"
-    >
-      <img src="./src/assets/logo2.svg" alt="JelajahIndo Logo" class="h-10" />
 
-      <!-- Desktop -->
+  <body class="font-jakarta text-gray-800 bg-white overflow-x-hidden">
+    <header
+      class="flex justify-between items-center px-5 py-4 md:px-20 bg-white/90 backdrop-blur-md mx-auto w-full relative z-30 md:fixed top-0 left-0 border-b border-gray-100"
+    >
+      <a href="./index.htm" class="flex items-center gap-2 group">
+        <img
+          src="./src/assets/logo2.svg"
+          alt="JelajahIndo Logo"
+          class="h-10 transition-transform duration-300 group-hover:scale-105"
+        />
+      </a>
+
       <nav class="hidden md:flex gap-6 font-semibold">
-        <a href="./index.htm">Home</a>
-        <a href="./destination.html"> Destination </a>
-        <a href="./about.html">About</a>
-        <a href="./article.html">Article</a>
+        <a
+          href="./index.htm"
+          class="relative py-1 hover:text-green-700 transition-colors"
+          >Home</a
+        >
+        <a
+          href="./destination.html"
+          class="relative py-1 text-green after:absolute after:left-0 after:bottom-0 after:h-0.5 after:w-full after:rounded-full after:bg-green-800"
+          >Destination</a
+        >
+        <a
+          href="./about.html"
+          class="relative py-1 hover:text-green-700 transition-colors"
+          >About</a
+        >
+        <a
+          href="./article.html"
+          class="relative py-1 hover:text-green-700 transition-colors"
+        >
+          Article
+        </a>
       </nav>
 
-      <!-- Mobile Button -->
-      <button id="menu-button" class="md:hidden relative z-20">
+      <button id="menu-button" class="md:hidden relative z-40 p-1">
         <i id="menu-icon" class="ph-bold ph-list text-3xl"></i>
       </button>
 
-      <!-- Fullscreen Mobile Menu -->
       <div
         id="mobile-menu"
-        class="fixed inset-0 z-8 h-screen w-screen bg-white/80 backdrop-blur-md -translate-x-full transition-transform duration-500 ease-in-out"
+        class="fixed inset-0 z-30 h-screen w-screen bg-white/95 backdrop-blur-md -translate-x-full transition-transform duration-500 ease-in-out"
       >
         <nav
           class="flex h-full flex-col items-center justify-center gap-8 text-2xl font-semibold"
         >
-          <a href="./index.htm" class="mobile-link"> Home </a>
-
-          <a href="./destination.html" class="mobile-link"> Destination </a>
-
-          <a href="./about.html" class="mobile-link"> About </a>
-
-          <a href="./article.html" class="mobile-link"> Article </a>
+          <a href="./index.htm">Home</a>
+          <a href="./destination.html" class="text-green-700 transition-colors"
+            >Destination</a
+          >
+          <a href="./about.html">About</a>
+          <a href="./article.html">Article</a>
         </nav>
       </div>
     </header>
@@ -77,7 +95,7 @@
           class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 w-full gap-10"
         >
           <!-- card 1 -->
-          <div class="card-destination">
+          <div class="card-destination group">
             <img
               src="./src/assets/Labuanbajo.jpg"
               alt="Labuan Bajo"
@@ -90,10 +108,17 @@
                 <i class="ph-bold ph-map-pin text-base"></i>
                 <p>East Nusa Tenggara</p>
               </div>
+              <p class="card-destination-desc">
+                Labuan Bajo is a picturesque coastal town in Flores, Indonesia,
+                and the gateway to the famous Komodo National Park. Known for
+                its iconic Komodo dragons, dramatic viewpoints on Padar Island,
+                vibrant diving spots, and stunning pink beaches, it is the
+                ultimate paradise for island hoppers and adventurers.
+              </p>
             </div>
           </div>
           <!-- card 2 -->
-          <div class="card-destination">
+          <div class="card-destination group">
             <img
               src="./src/assets/borobudur.jpg"
               alt="Borobudur Temple"
@@ -106,10 +131,17 @@
                 <i class="ph-bold ph-map-pin text-base"></i>
                 <p>Central Java</p>
               </div>
+              <p class="card-destination-desc">
+                Borobudur Temple is a 9th-century UNESCO World Heritage Site in
+                Central Java, Indonesia, and the world's largest Buddhist
+                monument. Famous for its intricate relief panels, bell-shaped
+                stupas, and breathtaking sunrise views, Borobudur is an
+                unmissable destination for history and culture enthusiasts.
+              </p>
             </div>
           </div>
           <!-- card 3 -->
-          <div class="card-destination">
+          <div class="card-destination group">
             <img
               src="./src/assets/komodo.jpg"
               alt="Komodo Island"
@@ -122,10 +154,17 @@
                 <i class="ph-bold ph-map-pin text-base"></i>
                 <p>East Nusa Tenggara</p>
               </div>
+              <p class="card-destination-desc">
+                Komodo Island, part of the UNESCO World Heritage Site in East
+                Nusa Tenggara, is world-famous as the natural habitat of the
+                prehistoric Komodo dragon. Featuring dramatic rugged hills,
+                crystal-clear waters, and unique pink sand beaches, it offers an
+                unforgettable adventure into wild, untamed nature.
+              </p>
             </div>
           </div>
           <!-- card 4 -->
-          <div class="card-destination">
+          <div class="card-destination group">
             <img
               src="./src/assets/ijen.jpg"
               alt="Mount Ijen"
@@ -138,10 +177,17 @@
                 <i class="ph-bold ph-map-pin text-base"></i>
                 <p>East Java</p>
               </div>
+              <p class="card-destination-desc">
+                Mount Ijen is an active volcano in East Java famous for its
+                world-renowned electric-blue flames and the world's largest
+                acidic crater lake. Renowned for night trekking and traditional
+                sulfur mining, it offers a surreal, otherworldly landscape
+                unlike anywhere else on Earth.
+              </p>
             </div>
           </div>
           <!-- card 5 -->
-          <div class="card-destination">
+          <div class="card-destination group">
             <img
               src="./src/assets/wakatobi.jpg"
               alt="Wakatobi"
@@ -154,11 +200,18 @@
                 <i class="ph-bold ph-map-pin text-base"></i>
                 <p>Southeast Sulawesi</p>
               </div>
+              <p class="card-destination-desc">
+                Wakatobi National Park in Southeast Sulawesi is a world-class
+                marine paradise boasting pristine coral reefs, incredible
+                biodiversity, and crystal-clear waters. Renowned globally for
+                diving and snorkeling, it is home to over 750 coral species and
+                rich sea life.
+              </p>
             </div>
           </div>
 
           <!-- card 6 -->
-          <div class="card-destination">
+          <div class="card-destination group">
             <img
               src="./src/assets/Nusapenida.jpg"
               alt="Nusa Penida"
@@ -171,10 +224,17 @@
                 <i class="ph-bold ph-map-pin text-base"></i>
                 <p>Bali</p>
               </div>
+              <p class="card-destination-desc">
+                Nusa Penida is a breathtaking island southeast of Bali, famous
+                for its dramatic coastal cliffs, pristine beaches, and vibrant
+                marine life. Home to iconic spots like Kelingking Beach, Broken
+                Beach, and Angel's Billabong, it is a must-visit paradise for
+                adventure seekers and photography enthusiasts.
+              </p>
             </div>
           </div>
           <!-- card 7 -->
-          <div class="card-destination">
+          <div class="card-destination group">
             <img
               src="./src/assets/toba.jpg"
               alt="Lake Toba"
@@ -187,10 +247,17 @@
                 <i class="ph-bold ph-map-pin text-base"></i>
                 <p>North Sumatra</p>
               </div>
+              <p class="card-destination-desc">
+                Lake Toba is the world's largest volcanic lake and one of
+                Indonesia's most breathtaking natural wonders, located in North
+                Sumatra. Formed by a massive supervolcanic eruption, it features
+                the charming Samosir Island at its center, rich Batak culture,
+                and serene mountain landscapes.
+              </p>
             </div>
           </div>
           <!-- card 8 -->
-          <div class="card-destination">
+          <div class="card-destination group">
             <img
               src="./src/assets/uluwatu.jpg"
               alt="Uluwatu"
@@ -203,6 +270,13 @@
                 <i class="ph-bold ph-map-pin text-base"></i>
                 <p>Bali</p>
               </div>
+              <p class="card-destination-desc">
+                Uluwatu is an iconic coastal region in Bali, famous for its
+                majestic cliffside temple perched high above the Indian Ocean.
+                Renowned for spectacular sunset views, traditional Kecak fire
+                dances, and world-class surfing waves, it is a quintessential
+                destination for culture and ocean lovers.
+              </p>
             </div>
           </div>
           <!-- end -->
